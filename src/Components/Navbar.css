@@ -1,0 +1,159 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    position: static;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Logo Styling */
+  .navbar-logo {
+    height: 50px;
+  }
+  
+  /* Hamburger Menu */
+  .hamburger-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-direction: column;
+    margin-right: 2%;
+  }
+  
+  .hamburger-menu .line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+  }
+  
+  /* Menu Container */
+  .menu-container {
+    position: fixed;
+    top: -200%; /* Initially hidden above the screen */
+    left: 0;
+    width: 100%;
+    height: 100%; /* Full screen height for dropdown menu */
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+      ),
+      url('../assets/navbar.jpg'); /* Replace with your background image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start at the top */
+    align-items: center; /* Center items horizontally */
+    z-index: 999; /* Ensure it sits above the navbar */
+    transition: top 0.4s ease; /* Smooth sliding effect */
+    padding-top: 50px; /* Add padding for the logo */
+  }
+  
+  .menu-container.open {
+    top: 0; /* Slide into view */
+  }
+  
+  /* Dropdown Logo */
+  .dropdown-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add spacing below the logo */
+  }
+  
+  .dropdown-logo img {
+    height: 100px;
+    right: 3%; /* Adjust logo size */
+  }
+  
+  /* Dropdown Menu */
+  .menu-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Align menu items to the left */
+    width: 80%; /* Adjust text alignment area */
+  }
+  
+  .menu-container li {
+    margin: 15px 0;
+  }
+  
+  .menu-container li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-container li a:hover {
+    color: #ffc107; /* Change text color on hover */
+  }
+  
+  /* Arrow and Underline Effect */
+  .menu-container li a::before {
+    content: "→"; /* Add arrow */
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-10px);
+    color: #ffc107; /* Arrow color */
+  }
+  
+  .menu-container li a:hover::before {
+    opacity: 1;
+    transform: translateX(0); /* Move arrow into position */
+  }
+  
+  .menu-container li a::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffc107;
+    transition: width 0.3s ease;
+  }
+  
+  .menu-container li a:hover::after {
+    width: 100%; /* Expand underline on hover */
+  }
+  
+ /* Close Button */
+.close-menu {
+    position: absolute;
+    top: 10px; /* Position relative to the container */
+    right: 20px; /* Position on the right */
+    width: 40px; /* Circle dimensions */
+    height: 40px;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border: 2px solid #fff; /* Add white border for circle */
+    border-radius: 50%; /* Make it circular */
+    font-size: 40px; /* Size of the cross */
+    color: #fff;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly opaque background */
+    transition: transform 0.3s ease;
+  }
+  
+  .close-menu:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  
