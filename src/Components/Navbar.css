@@ -4,16 +4,21 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); /* Dark background with transparency */
     color: #fff;
     position: static;
     width: 100%;
     z-index: 1000;
   }
-  
+  /* Center Logo */
+.navbar-center-logo {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
   /* Logo Styling */
   .navbar-logo {
-    height: 50px;
+    height: 90px;
   }
   
   /* Hamburger Menu */
@@ -88,18 +93,21 @@
   
   .menu-container li {
     margin: 15px 0;
+    
   }
   
   .menu-container li a {
     text-decoration: none;
     color: #fff;
-    font-size: 18px;
+    font-size: 27px;
     position: relative;
     transition: color 0.3s ease;
+    
   }
   
   .menu-container li a:hover {
     color: #ffc107; /* Change text color on hover */
+    
   }
   
   /* Arrow and Underline Effect */
@@ -111,10 +119,12 @@
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateX(-10px);
     color: #ffc107; /* Arrow color */
+    
   }
   
   .menu-container li a:hover::before {
     opacity: 1;
+   
     transform: translateX(0); /* Move arrow into position */
   }
   
@@ -127,16 +137,18 @@
     height: 2px;
     background-color: #ffc107;
     transition: width 0.3s ease;
+    
   }
   
   .menu-container li a:hover::after {
     width: 100%; /* Expand underline on hover */
+    
   }
   
  /* Close Button */
 .close-menu {
     position: absolute;
-    top: 10px; /* Position relative to the container */
+    top: 20px; /* Position relative to the container */
     right: 20px; /* Position on the right */
     width: 40px; /* Circle dimensions */
     height: 40px;

@@ -1,0 +1,138 @@
+/* Main Container */
+.scroll-transition {
+    position: relative;
+    width: 100%;
+    height: 120vh; /* Adjust height for hover effect */
+    background-color: #000; /* Background color */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Start content at the top */
+    align-items: center;
+  }
+  
+  .scroll-transition::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/backgroundscroll.jpg'); /* Replace with the correct path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px) brightness(0.5); /* Apply blur and darkening */
+    z-index: 0; /* Ensure it stays behind the content */
+    transition: transform 1.5s ease-in-out, filter 1.5s ease-in-out;
+  }
+  
+  .scroll-transition:hover::before {
+    transform: scale(1.1); /* Zoom effect */
+    filter: blur(3px) brightness(0.4); /* Adjust blur and brightness */
+  }
+  
+  /* Hero Content */
+  .hero-content {
+    position: relative;
+    z-index: 3; /* Ensure content appears above everything else */
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 20vh; /* Push content slightly down */
+    transition: transform 1s ease; /* Smooth movement upwards */
+    font-family: 'Poppins';
+   
+  }
+  
+  .scroll-transition:hover .hero-content {
+    transform: translateY(-50%); /* Moves content upwards */
+  }
+  
+  .hero-title {
+    font-family: 'Transcend';
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffd700; /* Golden yellow color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add subtle shadow */
+    margin-bottom: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #ddd;
+    margin-bottom: 2rem;
+  }
+  
+  /* Explore Button */
+  .explore-button {
+    position: absolute;
+    bottom: 5%; /* Positioned near the bottom of the container */
+    right: 5%; /* Positioned near the right edge */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    background-color: #FBD88D; /* Light yellow */
+    color: #000; /* Black text */
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 3; /* Ensure it appears above the handshake */
+  }
+  
+
+  
+  .arrow {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease; /* Arrow animation */
+  }
+  
+ 
+  
+  /* Handshake Image */
+  .handshake-image {
+    position: absolute;
+    bottom: -50%; /* Start further below the section */
+    left: 50%;
+
+    transform: translate(-50%, 100%) scale(1.4); /* Initially off-screen */
+    width: 1440px; /* Cover the section width proportionally */
+    height: 914px; /* Maintain aspect ratio */
+    z-index: 1; /* Ensure it stays below the logo */
+    opacity: 0; /* Start as invisible */
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out; /* Smooth animation upwards */
+  }
+  
+  .scroll-transition:hover .handshake-image {
+    bottom: -10%; /* Move below the logo */
+    opacity: 1; /* Fully visible */
+    transform: translate(-50%, 0) scale(1.2); /* Final centered position */
+  }
+  
+  /* Logo Animation */
+  .logo-image {
+    position: absolute;
+    bottom: -60%; /* Start further below the section */
+    left: 50%;
+    transform: translate(-90%, 100%) scale(1); /* Initially off-screen */
+    max-width: 200px; /* Adjust size */
+    height: auto;
+    z-index: 2; /* Ensure it appears above the handshake */
+    opacity: 0; /* Start as invisible */
+    transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out; /* Smooth animation */
+  }
+  
+  .scroll-transition:hover .logo-image {
+    bottom: 60%; /* Position just below the content */
+    opacity: 1; /* Fully visible */
+    transform: translate(-50%, 0) scale(1); /* Final centered position */
+  }
+  

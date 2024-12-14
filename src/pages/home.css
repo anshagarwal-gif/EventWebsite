@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.who-are-we {
+  text-align: center;
+  color: #fff;
+  background-color: #000; /* Black background */
+  padding: 20px;
+  /* Font for main text */
+}
+
+.title {
+  font-size: 52px;
+  font-family: 'Transcend'; /* Elegant font for the title */
+  background: linear-gradient(to right, white, #ffd700, #ffffff); /* Gold shine */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 40px;
+}
+
+.mission-vision {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* Three columns: Mission | Line | Vision */
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Add spacing between columns */
+  margin: 40px 0;
+}
+
+.line {
+  height: 150px; /* Height of the line */
+  width: 2px; /* Line width */
+  background-color: white; /* Gold line */
+}
+
+.mission, .vision {
+  text-align: center;
+}
+
+.mission {
+  text-align: right;
+  margin-right: 40%;
+}
+
+.vision {
+  text-align: left;
+  margin-left: 40%;
+}
+
+.mission h3, .vision h3 {
+  font-size: 1.8rem; /* Slightly larger headings */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.mission p, .vision p {
+  font-size: 1.2rem; /* Increase font size for readability */
+  line-height: 1.8; /* Adjust line height */
+  margin-top: 10px;
+  font-style: italic;
+  font-family: 'Playfair Display', serif;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between; /* Center align all stats */
+  align-items: center; /* Vertically align content */
+  
+  margin-top: 40px;
+  flex-wrap: wrap; /* Wrap to next line for responsiveness */
+  
+}
+
+.stat-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent dark overlay */
+    z-index: 2; /* Ensure overlay is above the image */
+  }
+  .stat {
+    flex: 1;
+    position: relative;
+    width: 300px; /* Set a fixed width for consistency */
+    height: 300px; /* Set a fixed height for consistency */
+    margin: 0px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    
+  }
+  
+.stat-number {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white; 
+  position: absolute;
+  top: 30%; /* Adjust the position to align properly */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3; /* Ensure it is above the image */
+}
+
+.stat-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fits properly */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Place the image below the text */
+    filter: blur(2px) brightness(1.5); /* Add blur and darken the image */
+    
+  }
+
+.stat-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6; /* Ensure text below the number is on top */
+  font-family: 'Montserrat';
+}
+
+.stat-description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ddd;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3; /* Ensure description is visible */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-vision {
+    grid-template-columns: 1fr; /* Single column for mobile */
+    grid-template-rows: auto auto auto; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .line {
+    height: 2px; /* Make the line horizontal */
+    width: 80%;
+    margin: 20px auto; /* Center the line */
+  }
+
+  .mission, .vision {
+    text-align: center; /* Center text on mobile */
+  }
+  
+
+  .stats {
+    flex-direction: column; /* Stack stats vertically */
+    gap: 20px; /* Reduce spacing */
+  }
+
+  .stat {
+    width: 80%; /* Adjust width for smaller screens */
+    height: auto; /* Let height adjust automatically */
+  }
+
+  .stat-number {
+    font-size: 3rem; /* Adjust font size for smaller screens */
+  }
+
+}
+/* WHAT WE DO SECTION */
+.what-we-do {
+    text-align: center;
+    color: #fff;
+    background-color: #000; /* Match the black background */
+   
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .what-we-do-title {
+    font-size: 52px;
+    font-family: ''; /* Elegant font for the title */
+    color: #ffd700; /* Gold color */
+    margin-bottom: 20px;
+  }
+  
+  .what-we-do-description {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #ffffff; /* White text */
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto; /* Center align the paragraph */
+  }
+  /* Events Row Container */
+.events-row-container {
+    position: relative;
+    padding: 90px 20px; /* Add padding for spacing */
+    overflow: hidden; /* Prevent overflow from blur effects */
+  }
+/* Blurred and Dark Background */
+.events-row-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/background.png'); /* Replace with your background image path */
+    background-size: cover; /* Ensure the background covers the area */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat;
+    filter: blur(5px) brightness(0.5); /* Apply blur and darken the background */
+    z-index: 1; /* Keep it behind the cards */
+   
+  }
+/* Events Row */
+.events-row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    z-index: 2; /* Place above the blurred background */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    
+  }  
+
+.events-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure overlay is above the background */
+    
+  }
+/* Event Cards */
+.event-card {
+    position: relative;
+    width: 250px; /* Adjust card width */
+    height: 600px; /* Adjust card height */
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 2; /* Ensure cards are above the background */
+  }
+  /* Hover Effect */
+.event-card:hover .light-beam {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.2); /* Make the light beam larger */
+  }
+  /* Light Beam */
+.light-beam {
+    position: absolute;
+    top: 70px; /* Adjust starting position below bulb */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 300px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0) 50%
+    );
+    clip-path: polygon(50% 0%, 35% 100%, 65% 100%); /* Create a soft V shape */
+    opacity: 0;
+    filter: blur(50px); /* Blur to soften the edges */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 2;
+  }
+  /* Hover Effect */
+  .event-card:hover .light-beam {
+    opacity: 1; /* Make the light visible */
+  }
+
+/* BULB EFFECT */
+/* Bulb */
+/* Bulb */
+.bulb {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.3));
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 3;
+  }
+  
+  .event-card.hovered .bulb {
+    opacity: 1;
+    top: 0; /* Bring bulb closer to the image */
+  }
+  /* Bulb Container */
+.bulb-container {
+    position: absolute;
+    top: 20px; /* Adjust to position the bulb above the instrument */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5; /* Keep above other elements */
+  }
+  .event-card:hover .event-image {
+    filter: grayscale(0%); /* Remove grayscale on hover */
+  }
+  
+  /* Base */
+  .base {
+    position: absolute;
+    bottom: 100px; /* Adjust to give space for the text */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; /* Increase base width */
+    height: 30px; /* Increase base height */
+    background: linear-gradient(to right, #333, #444);
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    filter: grayscale(100%); /* Initial grayscale */
+    
+  }
+  
+  .event-card.hovered .base {
+    filter: grayscale(0%); /* Remove grayscale on hover */
+  }
+  
+  /* Event Image */
+  .event-image {
+    width: 190px; /* Increase image size */
+    height: 305px;
+    position: relative;
+    z-index: 2;
+    margin-top: 160px; /* Create space for the bulb */
+    margin-bottom: 20px; /* Space above the base */
+    filter: grayscale(100%); /* Initial grayscale */
+    transition: filter 0.3s ease-in-out;
+  }
+ 
+  /* Event Details */
+  .event-details {
+    position: absolute;
+    top: 82.8%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  
+  .event-title {
+    font-size: 20px; /* Slightly larger text */
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Poppins';
+  }
+  
+  .event-link {
+    font-size: 20px;
+    color: #ffd700;
+    text-decoration: none;
+     
+  }
+  
+  
+  .event-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .event-card {
+      width: 90%; /* Adjust card width for smaller screens */
+    }
+  
+    .event-image {
+      width: 100px; /* Reduce image size */
+      margin-top: 30px; /* Adjust margin */
+    }
+  
+    .base {
+      width: 150px; /* Adjust base width */
+    }
+  }
+  
+ /* Background Section */
+.backgroundnav-section {
+  margin-top: 0px; /* Adjust spacing to match navbar height */
+  position: relative;
+}
+
+.backgroundnav-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image scales properly */
+}

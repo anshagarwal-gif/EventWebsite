@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import droplogo from '../assets/image.png'
+import droplogo from '../assets/imagelogo.png'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,12 +12,8 @@ const Navbar = () => {
     <>
       {/* Navbar */}
       <nav className="navbar">
-        <div className="navbar-brand">
-          <img
-            src="/path-to-your-logo.png" // Replace with your logo path
-            alt="Logo"
-            className="navbar-logo"
-          />
+      <div className="navbar-center-logo">
+          <img src={droplogo} alt="Logo" className="navbar-logo" />
         </div>
         <div className="hamburger-menu" onClick={toggleMenu}>
           <div className="line"></div>

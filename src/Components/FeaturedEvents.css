@@ -1,0 +1,110 @@
+.featured-events {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.featured-text {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    gap: 1rem; /* Add spacing between elements */
+  }
+.featured-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Georgia', serif; /* Or use a similar serif font */
+    color: #FFD700; /* Golden-yellow color */
+    text-shadow: 1px 1px 2px black; /* Adds a slight shadow for better contrast */
+    margin-bottom: 1rem;
+}
+
+.featured-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5; /* Maintain spacing between lines */
+    width: 40%; /* Adjust the width to restrict text flow and create space on the right */
+    text-align: left; /* Ensure the text stays aligned to the left */
+    white-space: normal; /* Allow text to wrap */
+    overflow: hidden; /* Prevent overflow of extra text */
+    display: -webkit-box; /* Enable multiline text truncation */
+    -webkit-line-clamp: 3.5; /* Clamp the text to exactly 3 lines */
+    -webkit-box-orient: vertical; /* Ensure proper text orientation */
+   
+}
+.explore-events {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #FBD88D; /* Light yellow background */
+    color: #000; /* Black text color */
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 12px; /* Rounded corners */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .explore-events:hover {
+   
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+  }
+  
+  .arrow {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease; /* Smooth animation for arrow */
+
+  }
+ 
+
+.featured-event-cards {
+  display: flex;
+  flex: 1.5;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.featured-card {
+  width: 101.33px;
+  height: 389px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 90px; /* Oval shape */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.featured-card:hover {
+  width: 340px; /* Increases width on hover */
+  height: 379px;
+  border-radius: 20px; /* Adjusts radius to maintain oval shape */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+.featured-card-large{
+  
+    background-size: cover;
+    background-position: center;
+  
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.event-title {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.event-date {
+  font-size: 1rem;
+  color: #aaa;
+}

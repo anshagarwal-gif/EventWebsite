@@ -1,0 +1,68 @@
+.clients-section {
+    display: flex;
+    align-items: center; /* Align content vertically */
+    justify-content: space-between; /* Space between text and grid */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 50px 80px;
+    gap: 50px;
+  }
+  
+  .clients-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .clients-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFD700; /* Golden color */
+    margin-bottom: 20px; /* Space below title */
+    
+  }
+  
+  .clients-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 0; /* No extra margin below */
+    max-width: 400px; /* Subtitle width */
+    flex: 1;
+    text-align: left;
+  }
+  
+  .clients-grid {
+    flex: 2.5; /* Adjust the size of the grid compared to the text */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 20px; /* Space between grid items */
+    justify-content: center; /* Center the grid */
+  }
+  
+  .client-item {
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .client-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .client-logo {
+    max-width: 100%; /* Logo takes the full space inside the item */
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .client-item:hover .client-logo {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+  
