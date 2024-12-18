@@ -1,0 +1,91 @@
+.appointment-section {
+    background-image: url(./Assets/appointmentSectionBackground.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+    padding: 7vw 0px;
+}
+
+.appointment-content {
+    width: fit-content;
+    height: auto;
+    padding: 4vw 15vw;
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.120);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(25.5px);
+    -webkit-backdrop-filter: blur(25.5px);
+    border-radius: 10px;
+}
+
+.appointment-heading {
+    font-family: Transcend;
+    font-size: 4vw;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.appointment-highlight {
+    color: #ffcc00;
+}
+
+.appointment-subtext {
+    font-size: 1.5vw;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.appointment-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.appointment-primary-button,
+.appointment-secondary-button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1vw;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.appointment-primary-button {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-secondary-button {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+@media all and (max-width: 600px){
+    .appointment-content{
+        padding: 4vw 8vw;
+    }
+
+    .appointment-heading{
+        font-size: 6vw;
+    }
+
+    .appointment-subtext{
+        font-size: 2.5vw;
+    }
+
+    .appointment-primary-button,
+    .appointment-secondary-button{
+        font-size: 2vw;
+    }
+}
