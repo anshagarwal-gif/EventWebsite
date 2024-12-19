@@ -1,0 +1,66 @@
+.heromain{
+    padding: 3.5vw 0px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 0 50vw inset rgba(0, 0, 0, 0.76);
+}
+
+.herocontent{
+    width: fit-content;
+    height: auto;
+    padding: 2vw 21vw;
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+}
+
+.herotitle{
+    font-family: Transcend;
+    font-size: 4.8vw;
+    font-weight: 600;
+    background: linear-gradient(90deg, #E1BB2B, #7B6618);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 35px 0;
+}
+
+.herocontent p{
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-size: 1.8vw;
+    margin: 0;
+}
+
+.herosubtitle{
+    font-weight: 300 !important;
+    font-style: italic;
+    margin-bottom: 10px !important;
+}
+
+@media all and (max-width: 800px){
+    .herotitle{
+        font-size: 7vw;
+    }
+
+    .herocontent{
+        padding: 2vw 11vw;
+    }
+
+    .herocontent p{
+        font-size: 2.5vw;
+    }
+}
+
+@media all and (max-width: 600px){
+    .herotitle{
+        font-size: 8vw;
+    }
+
+    .herocontent{
+        padding: 2vw 10vw;
+    }
+
+    .herocontent p{
+        font-size: 3vw;
+    }
+}

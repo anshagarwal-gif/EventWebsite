@@ -1,9 +1,11 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import WhatWeDo from './pages/WhatWeDo/WhatWeDo';
+import News from './pages/News/News';
+import Gallery from './pages/Gallery/Gallery';
 
 
 function App() {
@@ -13,6 +15,9 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path='/whatwedo' element={<WhatWeDo />}/>
+            <Route path='/news' element={<News />}/>
+            <Route path='/gallery' element={<Gallery />}/>
           </Routes>
           
           <Footer/>
