@@ -1,0 +1,60 @@
+.gallery {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-photo, .gallery-video {
+    width: 40vw;
+    height: auto;
+}
+
+.loadmore-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: .8rem 1rem;
+    background-color: #f9ac27;
+    color: rgb(26, 26, 26);
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 5vw auto 10vw;
+  }
+
+  .explore-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #2d2d2d;
+    transform: rotate(45deg);
+    padding: 0; 
+    margin-left: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .loadmore-btn:hover .explore-icon{
+    transform: rotate(90deg);
+  }
+
+  .explore-icon path {
+    fill: rgb(26, 26, 26);
+  }
+
+  @media all and (max-width: 800px){
+    .gallery {
+        grid-template-columns: auto;
+    }
+    .gallery-photo, .gallery-video {
+        width: 80vw;
+    }
+
+    .loadmore-btn{
+        margin: 10vw auto 15vw;
+    }
+  }
