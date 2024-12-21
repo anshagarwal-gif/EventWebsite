@@ -1,0 +1,122 @@
+.clients-section {
+    display: flex;
+    align-items: center; /* Align content vertically */
+    justify-content: space-between; /* Space between text and grid */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 50px 80px;
+    gap: 50px;
+  }
+  
+  .clients-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .clients-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background:  rgba(225, 187, 43, 1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-family: Transcend;
+    margin-bottom: 20px; /* Space below title */
+    
+  }
+  
+  .clients-subtitle {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 0; /* No extra margin below */
+    max-width: 600px; /* Subtitle width */
+    flex: 1;
+    text-align: left;
+    font-family: 'Poppins';
+  }
+  
+/* General Grid Styling */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px; /* Space between grid items */
+  justify-items: center;
+  padding: 20px;
+  background-color: #000; /* Black background */
+  perspective: 1000px; /* Enable 3D perspective */
+}
+
+/* Card Styling */
+.client-item {
+  width: 204px; /* Card width */
+  height: 262px; /* Card height */
+  position: relative;
+  perspective: 1000px; /* 3D perspective for each card */
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease; /* Smooth flip transition */
+}
+.client-item.flipped .card-inner {
+  transform: rotateX(180deg); /* Flip along Y-axis */
+}
+/* Card Faces */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back face during rotation */
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+/* Front Face */
+.card-front {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+  .client-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+/* Logo Styling */
+.client-logo {
+  max-width: 80%; /* Logo fits inside the card */
+  max-height: 80%; /* Logo fits inside the card */
+  object-fit: contain;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transitions for logo changes */
+}
+/* Back Face */
+.card-back {
+  background: #eee; /* Light gray background for back */
+  transform: rotateX(180deg); /* Correct orientation of back face */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  }
+
+  .client-item {
+    width: 200px; /* Smaller card width */
+    height: 200px; /* Smaller card height */
+  }
+} 

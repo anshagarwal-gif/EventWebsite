@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.who-are-we {
+  text-align: center;
+  color: #fff;
+  background-color: #000; /* Black background */
+  padding: 20px;
+  /* Font for main text */
+}
+
+.title {
+  font-size: 50px;
+ 
+  background:  rgba(225, 187, 43, 1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-family: Transcend;
+  margin-bottom: 40px;
+}
+.mission-vision {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* Three columns: Mission | Line | Vision */
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Add spacing between columns */
+  margin: 40px 10px;
+}
+
+/* Style for the dividing line */
+.line {
+  height: 134px; /* Height of the line */
+  width: 2px; /* Line width */
+  background-color: white; /* Color of the line */
+}
+
+/* Mission and Vision Styling */
+.mission, .vision {
+  text-align: center; /* Center align text by default */
+  max-width: 500px; /* Restrict maximum width for better readability */
+}
+
+.mission {
+  text-align: left; /* Align mission text to the right on larger screens */
+  margin-left: 10%;
+}
+
+.vision {
+  text-align: right; /* Align vision text to the left on larger screens */
+  margin-left: 30%;
+}
+
+/* Headings Styling */
+.mission h3, .vision h3 {
+  font-size: 28px; /* Slightly larger headings */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.mission h3 {
+  margin-right: 55%;
+}
+
+.vision h3 {
+  margin-left: 50%;
+}
+
+/* Paragraph Styling */
+.mission p, .vision p {
+  font-size: 21px; /* Increase font size for readability */
+  line-height: 1.5; /* Adjust line height */
+  margin-top: 10px;
+  font-style: italic;
+  font-family: 'Poppins';
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-vision {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    grid-template-rows: auto auto auto; /* Stack items vertically */
+    text-align: center;
+    gap: 30px; /* Increase spacing between items */
+  }
+
+  .line {
+    height: 2px; /* Make the line horizontal */
+    width: 80%; /* Center the line horizontally */
+    margin: 20px auto; /* Adjust margins */
+  }
+
+  .mission, .vision {
+    text-align: center; /* Center align text */
+    margin: 0 auto; /* Center the blocks */
+  }
+
+  .mission h3, .vision h3 {
+    margin: 0; /* Remove specific margins */
+  }
+
+  .mission p, .vision p {
+    font-size: 18px; /* Slightly smaller font size for smaller screens */
+    line-height: 1.6; /* Adjust line height for readability */
+  }
+
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between; /* Center align all stats */
+  align-items: center; /* Vertically align content */
+  
+  margin-top: 40px;
+  flex-wrap: wrap; /* Wrap to next line for responsiveness */
+  
+}
+
+.stat-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent dark overlay */
+    z-index: 2; /* Ensure overlay is above the image */
+  }
+  .stat {
+    flex: 1;
+    position: relative;
+    width: 400px; /* Set a fixed width for consistency */
+    height: 300px; /* Set a fixed height for consistency */
+    margin: 0px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    
+  }
+  
+.stat-number {
+  font-size: 68px;
+  font-weight: bold;
+  color: white; 
+  position: absolute;
+  top: 30%; /* Adjust the position to align properly */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3; /* Ensure it is above the image */
+}
+
+.stat-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image fits properly */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Place the image below the text */
+    filter: blur(2px) brightness(1.5); /* Add blur and darken the image */
+    
+  }
+
+.stat-text {
+  font-size: 38px;
+  font-weight: 400;
+  color: #fff;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  z-index: 6; /* Ensure text below the number is on top */
+  font-family: 'Montserrat';
+  width: 400px;
+  max-width: 250px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+  
+
+  .stats {
+    flex-direction: column; /* Stack stats vertically */
+    gap: 20px; /* Reduce spacing */
+  }
+
+  .stat {
+    width: 50%; /* Adjust width for smaller screens */
+    height: auto; /* Let height adjust automatically */
+  }
+
+  .stat-number {
+    font-size: 3rem; /* Adjust font size for smaller screens */
+  }
+
+}
+/* WHAT WE DO SECTION */
+.what-we-do {
+    text-align: center;
+    color: #fff;
+    background-color: #000; /* Match the black background */
+   
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .what-we-do-title {
+    font-size: 48px;
+    background:  rgba(225, 187, 43, 1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-family: Transcend;
+    margin-bottom: 20px;
+  }
+  
+  .what-we-do-description {
+    font-size: 22px;
+    font-weight: 400;
+    color: #ffffff; /* White text */
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto; /* Center align the paragraph */
+    font-family: Poppins;
+  }
+/* Events Row Container */
+.events-row-container {
+  position: relative;
+  padding: 90px 10px;
+  overflow: hidden !important; 
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+/* Blurred and Dark Background */
+.events-row-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/background.png'); /* Replace with your background image path */
+    background-size: cover; /* Ensure the background covers the area */
+    background-position: center; /* Center the background */
+    background-repeat: no-repeat;
+    filter: blur(5px) brightness(0.5); /* Apply blur and darken the background */
+    z-index: 1; /* Keep it behind the cards */
+    overflow: hidden;
+    background-color: transparent;
+    border: none; /* No border */
+    box-shadow: none; /* Remove any shadow effect */
+   outline: none; /* Remove any focus outline */
+   
+  }
+/* Events Row */
+.events-row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+  flex-wrap: wrap;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.events-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Ensure overlay is above the background */
+    overflow: hidden !important; 
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    
+  }
+  .event-card {
+    position: relative;
+    width: 250px; /* Adjust card width */
+    height: 600px; /* Adjust card height */
+    text-align: center;
+    margin: 0 auto;
+    overflow: hidden; /* Prevent overflow */
+    cursor: pointer;
+   
+    z-index: 20; /* Ensure proper layering */
+  }
+  .event-card, .bulb-img, .base, .event-image {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+/* Bulb Image */
+.bulb-img {
+  width: 132%; /* Fill the container */
+  height: 570px;  
+  filter: brightness(0); /* Completely dark initially */
+  background-color: transparent; /* Ensure transparency */
+  transition: filter 0.3s ease-in-out; /* Smooth brightness transition */
+  border: none; /* No border */
+  clip-path: circle(50%); 
+  overflow: hidden !important; 
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  
+
+}
+
+
+  .event-card:hover .bulb-img {
+    filter: brightness(1.5); /* Brighten the bulb */
+  }
+
+/* Bulb Container */
+.bulb-container {
+  position: absolute;
+  top: 130px; /* Start off-screen above the card */
+  left: 28%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 40px;
+  background-color: transparent; /* Transparent background */
+  border: none; /* No borders */
+  padding: 0; /* No padding */
+  opacity: 0; /* Initially invisible */
+  transition: all 0.5s ease-in-out; /* Smooth visibility and position change */
+  z-index: 5; /* Above other elements */
+  
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  
+}
+.events-row-container .event-card {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+  /* Hover State */
+.event-card:hover .bulb-container {
+  top: -70px; /* Move the bulb closer to the card */
+  opacity: 1; /* Make it visible */
+}
+
+  .event-card:hover .event-image {
+    filter: grayscale(0%); /* Remove grayscale on hover */
+  }
+
+  
+  /* Base */
+  .base {
+    position: absolute;
+    bottom: 100px; /* Adjust to give space for the text */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; /* Increase base width */
+    height: 30px; /* Increase base height */
+   
+    
+    transition: all 0.3s ease-in-out;
+    filter: grayscale(100%); /* Initial grayscale */
+    border: none;
+    background-color: transparent; /* Transparent background */
+    
+  }
+  
+  .event-card.hovered .base {
+    filter: grayscale(0%); /* Remove grayscale on hover */
+  }
+  
+  /* Event Image */
+  .event-image {
+    width: 210px; /* Increase image size */
+    height: 305px;
+    position: relative;
+    z-index: 2;
+    margin-top: 160px; /* Create space for the bulb */
+    margin-bottom: 20px; /* Space above the base */
+    filter: grayscale(100%); /* Initial grayscale */
+    transition: filter 0.3s ease-in-out;
+     
+    background-color: transparent !important;
+    border: none !important;
+    
+  }
+  
+ 
+  /* Event Details */
+  .event-details {
+    position: absolute;
+    top: 82.8%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    
+  }
+  
+  .event-title {
+    font-size: 20px; /* Slightly larger text */
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: 'Poppins';
+  }
+  
+  .event-link {
+    font-size: 20px;
+    color: #ffd700;
+    text-decoration: none;
+     
+  }
+  
+  
+  .event-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .event-card {
+      width: 90%; /* Adjust card width for smaller screens */
+    }
+  
+    .event-image {
+      width: 100px; /* Reduce image size */
+      margin-top: 30px; /* Adjust margin */
+    }
+  
+    .base {
+      width: 150px; /* Adjust base width */
+    }
+  }
+  
+ /* Background Section */
+.backgroundnav-section {
+  margin-top: 0px; /* Adjust spacing to match navbar height */
+  position: relative;
+}
+
+.backgroundnav-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image scales properly */
+}
