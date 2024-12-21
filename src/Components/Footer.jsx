@@ -1,5 +1,7 @@
 import React from "react";
-import "./Footer.css"; // Create a separate CSS file for styling
+import "./Footer.css";
+import LogoImage from "../assets/imagelogo.png";
+import { Facebook, Linkedin, Instagram, Twitter } from "lucide-react"
 
 const Footer = () => {
   return (
@@ -8,7 +10,7 @@ const Footer = () => {
         {/* Left Section */}
         <div className="footer-left">
           <img
-            src="/path-to-your-logo.png" // Replace with your logo path
+            src={LogoImage}
             alt="Logo"
             className="footer-logo"
           />
@@ -20,11 +22,11 @@ const Footer = () => {
           <div className="footer-column">
             <h4>COMPANY</h4>
             <ul>
-              <li>— About Us</li>
+              <li className="active-link">About Us</li>
+              <li>Work</li>
               <li>Services</li>
-              <li>Portfolio</li>
-              <li>Blogs</li>
-              <li>Book an Appointment</li>
+              <li>Careers</li>
+              <li>Link 5</li>
             </ul>
           </div>
           <div className="footer-column">
@@ -44,7 +46,7 @@ const Footer = () => {
               <li>Link 2</li>
               <li>Link 3</li>
               <li>Link 4</li>
-              <li>Link 5</li>
+              <li>Link 4</li>
             </ul>
           </div>
         </div>
@@ -53,20 +55,31 @@ const Footer = () => {
         <div className="footer-right">
           <ul className="social-links">
             <li>
-              <a href="#facebook">Facebook</a>
+              <a href="#facebook" className="social-button facebook">
+                <div><Facebook/></div> Facebook
+              </a>
             </li>
             <li>
-              <a href="#linkedin">LinkedIn</a>
+              <a href="#linkedin" className="social-button linkedin">
+                <div><Linkedin /></div> LinkedIn
+              </a>
             </li>
             <li>
-              <a href="#twitter">Twitter</a>
+              <a href="#twitter" className="social-button twitter">
+                <div><Twitter /></div> Twitter
+              </a>
             </li>
             <li>
-              <a href="#instagram">Instagram</a>
+              <a href="#instagram" className="social-button instagram">
+                <div><Instagram /></div> Instagram
+              </a>
             </li>
           </ul>
         </div>
       </div>
+
+      <div className="footer-divider"></div>
+
       <div className="footer-bottom">
         <p>© 2024 - All Rights Reserved - Wadhwa Events and Exhibits</p>
       </div>
