@@ -86,13 +86,34 @@
   border-radius: 90px; /* Oval shape */
   transition: all 0.3s ease;
   cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.featured-card h2, .featured-card-large h2 {
+  margin-bottom: 0;
+  transition: all 0.3s ease;
+  animation: appear 0.5s ease;
+}
+
+.featured-card p, .featured-card-large p {
+  margin-top: 0;
+  font-size: 13px;
+  width: 70%;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  animation: appear 0.5s ease;
 }
 
 .featured-card:hover {
   width: 340px; /* Increases width on hover */
   height: 379px;
   border-radius: 20px; /* Adjusts radius to maintain oval shape */
-  transform: scale(1.05); /* Slight scaling effect */
+  transform: scale(1.05);
+  box-shadow: 0 500px 0 0 inset rgba(0, 0, 0, 0.347); /* Slight scaling effect */
 }
 
 .featured-card-large{
@@ -102,6 +123,12 @@
   
     transition: all 0.3s ease;
     cursor: pointer;
+    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  box-shadow: 0 500px 0 0 inset rgba(0, 0, 0, 0.347);
 }
 
 .event-title {
@@ -112,6 +139,21 @@
 .event-date {
   font-size: 1rem;
   color: #aaa;
+}
+
+@keyframes appear{
+  0%{
+    opacity: 0;
+  }
+  40%{
+    opacity: 0;
+  }
+  60%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 /* Responsive Styles */
