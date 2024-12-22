@@ -113,7 +113,7 @@
   height: 379px;
   border-radius: 20px; /* Adjusts radius to maintain oval shape */
   transform: scale(1.05);
-  box-shadow: 0 500px 0 0 inset rgba(0, 0, 0, 0.347); /* Slight scaling effect */
+  box-shadow: 0 500px 0 0 inset rgba(0, 0, 0, 0.55); /* Slight scaling effect */
 }
 
 .featured-card-large{
@@ -128,7 +128,7 @@
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  box-shadow: 0 500px 0 0 inset rgba(0, 0, 0, 0.347);
+  box-shadow: 0 500px 0 0 inset rgba(0, 0, 0, 0.55);
 }
 
 .event-title {

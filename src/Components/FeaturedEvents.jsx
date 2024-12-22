@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import eventImage1 from '../assets/FeaturedEvent1.jpg';
+import personaImage from '../assets/persona-image.png';
 import eventImage2 from '../assets/FeaturedEvent2.jpg';
 import eventImage3 from '../assets/FeaturedEvent3.jpg';
 import eventImage4 from '../assets/FeaturedEvent4.jpg';
@@ -32,15 +32,15 @@ const FeaturedEvents = () => {
         <div
           className="featured-card"
           style={{
-            backgroundImage: `url(${eventImage1})`,
+            backgroundImage: `url(${personaImage})`,
             width: hoveredCard === 0 ? '340px' : '101.33px',
             height: hoveredCard === 0 ? '379px' : '389px',
           }}
           onMouseEnter={() => handleMouseEnter(0)}
           onMouseLeave={handleMouseLeave}
         > 
-          <h2 style={{display: hoveredCard === 0 ? "block" : "none"}}>Beach Party</h2> 
-          <p style={{display: hoveredCard === 0 ? "block" : "none"}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, libero</p> 
+          <h2 style={{display: hoveredCard === 0 ? "block" : "none"}}>MIT ADT’S PERSONA</h2> 
+          <p style={{display: hoveredCard === 0 ? "block" : "none"}}>Pune's biggest and most immersive technocultural fest.</p> 
         </div>
 
         <div
@@ -52,8 +52,8 @@ const FeaturedEvents = () => {
           }}
           onMouseEnter={() => handleMouseEnter(1)}
           onMouseLeave={handleMouseLeave}
-        ><h2 style={{display: hoveredCard === 1 ? "block" : "none"}}>Beach Party</h2> 
-          <p style={{display: hoveredCard === 1 ? "block" : "none"}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, libero</p> </div>
+        ><h2 style={{display: hoveredCard === 1 ? "block" : "none"}}>VISHWANATH SPORTS MEET</h2> 
+          <p style={{display: hoveredCard === 1 ? "block" : "none"}}>Pune's biggest sports extravaganza, Vishwanath Sports Meet.</p> </div>
         <div
           className="featured-card"
           style={{
@@ -63,8 +63,8 @@ const FeaturedEvents = () => {
           }}
           onMouseEnter={() => handleMouseEnter(2)}
           onMouseLeave={handleMouseLeave}
-        ><h2 style={{display: hoveredCard === 2 ? "block" : "none"}}>Beach Party</h2> 
-          <p style={{display: hoveredCard === 2 ? "block" : "none"}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, libero</p> </div>
+        ><h2 style={{display: hoveredCard === 2 ? "block" : "none"}}>PRISTINE EVENT</h2> 
+          <p style={{display: hoveredCard === 2 ? "block" : "none"}}>Pune's biggest and most immersive technocultural fest.</p> </div>
         <div
           className="featured-card-large"
           style={{
@@ -73,8 +73,8 @@ const FeaturedEvents = () => {
             height: hoveredCard === null ? '379px' : '389px',
             borderRadius: hoveredCard == null ? '20px' : '90px',
           }}
-        ><h2 style={{display: hoveredCard === null ? "block" : "none"}}>Beach Party</h2> 
-          <p style={{display: hoveredCard === null ? "block" : "none"}}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, libero</p> </div>
+        ><h2 style={{display: hoveredCard === null ? "block" : "none"}}>SPECTRA</h2> 
+          <p style={{display: hoveredCard === null ? "block" : "none"}}>Pune's biggest and most immersive technocultural fest.</p> </div>
       </div>
     </div>
   );
