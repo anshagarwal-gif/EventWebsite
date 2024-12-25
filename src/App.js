@@ -8,12 +8,15 @@ import WhatWeDo from './pages/WhatWeDo/WhatWeDo';
 import News from './pages/News/News';
 import Gallery from './pages/Gallery/Gallery';
 import Aboutus from './pages/Aboutus/Aboutus';
+import ContactUs from './pages/ContactUs/ContactUs';
 
 
 function App() {
   return (
     <Router>
+      
         <div className='flex flex-1 items-center'>
+          
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -21,6 +24,7 @@ function App() {
             <Route path='/news' element={<News />}/>
             <Route path='/gallery' element={<Gallery />}/>
             <Route path='/Aboutus' element={<Aboutus />}/>
+            <Route path='/Contactus' element={<ContactUs />}/>
           </Routes>
           
           <Footer/>

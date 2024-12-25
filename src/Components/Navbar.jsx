@@ -61,7 +61,7 @@ const Navbar = () => {
             <a href="/News">News</a>
           </li>
           <li>
-            <a href="#appointment">Contact Us</a>
+            <a href="/ContactUs">Contact Us</a>
           </li>
 
         </ul>

@@ -1,11 +1,13 @@
 import React from 'react';
 import './Aboutus.css';
 import HeroComponent from '../../Components/HeroComponent/HeroComponent';
-import backgroundImage from './Assets/image.png';
+import backgroundImage from './Assets/image.jpeg';
 import accenturelogo from './Assets/companylogo.png';
 import AppointmentComponent from '../../Components/AppointmentComponent/AppointmentComponent';
 import boximage from './Assets/image copy.png'
 import member1 from './Assets/team1.jpeg'
+import backgroundImage1 from './Assets/Exhibition.png';
+import backgroundImage2 from './Assets/image2.jpeg';
 const Aboutus = () => {
     return (
         <div>
@@ -30,13 +32,13 @@ const Aboutus = () => {
                     </p>
                 </div>
                 <div className="about-us-image">
-                    <img src={backgroundImage} alt="Event Scene"  />
+                    <img src={backgroundImage1} alt="Event Scene"  />
                 </div>
                 
             </div>
             <div className="numbers-that-matter">
                 <div className="numbers-image">
-                    <img src={backgroundImage} alt="Numbers Background" />
+                    <img src={backgroundImage2} alt="Numbers Background" />
                 </div>
                 <div className="numbers-content">
                     <h2>NUMBERS THAT MATTER</h2>
