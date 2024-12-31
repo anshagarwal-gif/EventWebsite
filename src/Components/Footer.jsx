@@ -14,7 +14,7 @@ const Footer = () => {
             alt="Logo"
             className="footer-logo"
           />
-          <p>Empowering memorable moments, one event at a time.</p>
+          <p>Creativity For Eternity</p>
         </div>
 
         {/* Middle Section */}
