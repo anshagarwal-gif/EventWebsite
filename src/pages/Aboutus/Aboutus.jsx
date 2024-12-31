@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import './Aboutus.css';
 import HeroComponent from '../../Components/HeroComponent/HeroComponent';
 import backgroundImage from './Assets/image.jpeg';
@@ -8,7 +8,55 @@ import boximage from './Assets/image copy.png'
 import member1 from './Assets/team1.jpeg'
 import backgroundImage1 from './Assets/Exhibition.png';
 import backgroundImage2 from './Assets/image2.jpeg';
+import TeamMember from '../../Components/TeamMember/TeamMember';
 const Aboutus = () => {
+
+    const aboutImageRef = useRef(null);
+    const numbersImageRef = useRef(null);
+
+    useEffect(() => {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3 // Trigger when 30% of the element is visible
+        };
+
+        const handleIntersection = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add the appropriate animation class based on the element
+                    if (entry.target.classList.contains('about-us-image')) {
+                        entry.target.classList.add('slide-in-right');
+                    } else if (entry.target.classList.contains('numbers-image')) {
+                        entry.target.classList.add('slide-in-left');
+                    }
+                    // Unobserve after animation is triggered
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+        // Observe both elements
+        if (aboutImageRef.current) {
+            observer.observe(aboutImageRef.current);
+        }
+        if (numbersImageRef.current) {
+            observer.observe(numbersImageRef.current);
+        }
+
+        // Cleanup observer on component unmount
+        return () => {
+            if (aboutImageRef.current) {
+                observer.unobserve(aboutImageRef.current);
+            }
+            if (numbersImageRef.current) {
+                observer.unobserve(numbersImageRef.current);
+            }
+        };
+    }, []);
+
     return (
         <div>
             <HeroComponent 
@@ -31,13 +79,13 @@ const Aboutus = () => {
                         on what truly matters: making memories that last a lifetime.
                     </p>
                 </div>
-                <div className="about-us-image">
+                <div className="about-us-image" ref={aboutImageRef}>
                     <img src={backgroundImage1} alt="Event Scene"  />
                 </div>
                 
             </div>
             <div className="numbers-that-matter">
-                <div className="numbers-image">
+                <div className="numbers-image" ref={numbersImageRef}>
                     <img src={backgroundImage2} alt="Numbers Background" />
                 </div>
                 <div className="numbers-content">
@@ -47,19 +95,19 @@ const Aboutus = () => {
                     </p>
                     <div className="numbers-stats">
                         <div>
-                            <h3>10+</h3>
+                            <h3>8+</h3>
                             <p>Years of Experience</p>
                         </div>
                         <div>
-                            <h3>50+</h3>
+                            <h3>500+</h3>
                             <p>Clients Satisfied</p>
                         </div>
                         <div>
-                            <h3>300+</h3>
+                            <h3>90+</h3>
                             <p>Events Per Year</p>
                         </div>
                         <div>
-                            <h3>20+</h3>
+                            <h3>6+</h3>
                             <p>Awards Won</p>
                         </div>
                     </div>
@@ -113,62 +161,9 @@ const Aboutus = () => {
                     ensuring your event is flawlessly executed and becomes a cherished memory.
                 </p>
                 <div className="team-members">
-                    <div className="team-member">
-                        <img src={member1} alt="Priya Sharma" />
-                       <div className="team-content">
-                        <h3>PRIYA SHARMA</h3>
-                        <p>Event Director</p>
-                        </div>
-                    </div>
-                    <div className="team-member">
-                        <img src={member1} alt="Rahul Kapoor" />
-                        <div className="team-content">
-                        <h3>RAHUL KAPOOR</h3>
-                        <p>Creative Strategist</p>
-                        </div>
-                    </div>
-                    <div className="team-member">
-                        <img src={member1} alt="Aisha Singh" />
-                        <div className="team-content">
-                        <h3>AISHA SINGH</h3>
-                        <p>Logistics Coordinator</p>
-                        </div>
-                    </div>
-                    <div className="team-member">
-                        <img src={member1} alt="Amit Patel" />
-                        <div className="team-content">
-                        <h3>AMIT PATEL</h3>
-                        <p>Client Relationship Manager</p>
-                        </div>
-                    </div>
-                    <div className="team-member">
-                        <img src={member1} alt="Maya Das" />
-                        <div className="team-content">
-                        <h3>MAYA DAS</h3>
-                        <p>Production Manager</p>
-                        </div>
-                    </div>
-                    <div className="team-member">
-                        <img src={member1} alt="Neel Desai" />
-                        <div className="team-content">
-                        <h3>NEEL DESAI</h3>
-                        <p>Content Writer</p>
-                        </div>
-                    </div>
-                    <div className="team-member">
-                        <img src={member1} alt="Neha Joshi" />
-                        <div className="team-content">
-                        <h3>NEHA JOSHI</h3>
-                        <p>Social Media Specialist</p>
-                        </div>
-                    </div>
-                    <div className="team-member">
-                        <img src={member1} alt="Ravi Malhotra" />
-                        <div className="team-content">
-                        <h3>RAVI MALHOTRA</h3>
-                        <p>Event Photographer</p>
-                        </div>
-                    </div>
+                    <TeamMember image={member1} name={"PRIYA SHARMA"} role={"Event Director"} backContent={"BackContent"}/>
+                    <TeamMember image={member1} name={"RAHUL KAPOOR"} role={"Creative Strategist"} backContent={"BackContent"}/>
+                    <TeamMember image={member1} name={"AISHA SINGH"} role={"Logistics Coordinator"} backContent={"BackContent"}/>
                 </div>
             </div>
             <AppointmentComponent/>
