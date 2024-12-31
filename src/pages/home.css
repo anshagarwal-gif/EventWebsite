@@ -174,22 +174,17 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   
-  
-
-  .stats {
-    flex-direction: column; /* Stack stats vertically */
-    gap: 20px; /* Reduce spacing */
-  }
-
   .stat {
-    width: 50%; /* Adjust width for smaller screens */
-    height: auto; /* Let height adjust automatically */
+    height: 180px;
   }
 
   .stat-number {
-    font-size: 3rem; /* Adjust font size for smaller screens */
+    font-size: 36px;
   }
 
+  .stat-text {
+    font-size: 14px;
+  }
 }
 /* WHAT WE DO SECTION */
 .what-we-do {
@@ -222,10 +217,7 @@
 .events-row-container {
   position: relative;
   padding: 90px 10px;
-  overflow: hidden !important; 
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+
 }
 /* Blurred and Dark Background */
 .events-row-container::before {
@@ -257,10 +249,7 @@
   gap: 10px;
   z-index: 2;
   flex-wrap: wrap;
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  outline: none !important;
+ 
 }
 
 .events-row::before {
@@ -271,11 +260,7 @@
     width: 100%;
     height: 100%;
     z-index: 1; /* Ensure overlay is above the background */
-    overflow: hidden !important; 
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    outline: none !important;
+  
     
   }
   .event-card {
@@ -289,12 +274,6 @@
    
     z-index: 20; /* Ensure proper layering */
   }
-  .event-card, .bulb-img, .base, .event-image {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    outline: none !important;
-  }
 
 /* Bulb Image */
 .bulb-img {
@@ -305,11 +284,7 @@
   transition: filter 0.3s ease-in-out; /* Smooth brightness transition */
   border: none; /* No border */
   clip-path: circle(50%); 
-  overflow: hidden !important; 
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  
+
 
 }
 
@@ -332,17 +307,10 @@
   opacity: 0; /* Initially invisible */
   transition: all 0.5s ease-in-out; /* Smooth visibility and position change */
   z-index: 5; /* Above other elements */
-  
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+
   
 }
-.events-row-container .event-card {
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-}
+
   /* Hover State */
 .event-card:hover .bulb-container {
   top: -70px; /* Move the bulb closer to the card */
@@ -386,8 +354,7 @@
     filter: grayscale(100%); /* Initial grayscale */
     transition: filter 0.3s ease-in-out;
      
-    background-color: transparent !important;
-    border: none !important;
+ 
     
   }
   
@@ -425,16 +392,20 @@
   /* Responsive Design */
   @media (max-width: 768px) {
     .event-card {
-      width: 90%; /* Adjust card width for smaller screens */
+      width: 33%; /* Adjust card width for smaller screens */
     }
   
     .event-image {
-      width: 100px; /* Reduce image size */
-      margin-top: 30px; /* Adjust margin */
+      width: 150px; /* Reduce image size */
+      margin-top: 150px; /* Adjust margin */
     }
   
     .base {
       width: 150px; /* Adjust base width */
+    }
+  
+    .bulb-img{
+      width: 500px;
     }
   }
   

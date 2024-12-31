@@ -4,7 +4,7 @@
     justify-content: space-between; /* Space between text and grid */
     background-color: #000; /* Black background */
     color: #fff; /* White text */
-    padding: 50px 80px;
+    padding: 0px 40px;
     gap: 50px;
   }
   
@@ -14,7 +14,7 @@
   }
   
   .clients-title {
-    font-size: 48px;
+    font-size: 58px;
     font-weight: bold;
     text-transform: uppercase;
     background:  rgba(225, 187, 43, 1);
@@ -26,11 +26,11 @@
   }
   
   .clients-subtitle {
-    font-size: 18px;
+    font-size: 28px;
     line-height: 1.8;
     color: #ddd;
     margin-bottom: 0; /* No extra margin below */
-    max-width: 600px; /* Subtitle width */
+    max-width: 800px; /* Subtitle width */
     flex: 1;
     text-align: left;
     font-family: 'Poppins';
@@ -104,19 +104,83 @@
   transform: rotateX(180deg); /* Correct orientation of back face */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
+/* Hover Effect */
+.client-item:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
 
 
 
 
-
-/* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1244px) {
   .clients-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    grid-template-columns: repeat(3, 1fr); /* Still 3 items per row */
   }
 
   .client-item {
-    width: 200px; /* Smaller card width */
-    height: 200px; /* Smaller card height */
+    width: 100px; /* Adjust card width for tablets */
+    height: 130px; /* Adjust card height for tablets */
+    gap: 8px;
   }
-} 
+  .clients-title {
+    font-size: 22px; /* Smaller font for mobile */
+  }
+
+  .clients-subtitle {
+    font-size: 16px; /* Smaller subtitle font size */
+    max-width: 600px;
+  }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .clients-grid {
+    grid-template-columns: repeat(3, 1fr); /* Maintain 3 items per row */
+    gap: 8px; /* Slightly reduce gap for compact layout */
+  }
+
+  .client-item {
+    width: 100px; /* Adjust card width for tablets */
+    height: 120px; /* Adjust card height for tablets */
+  }
+  .clients-title {
+    font-size: 16px; /* Smaller font for mobile */
+  }
+
+  .clients-subtitle {
+    font-size: 8px; /* Smaller subtitle font size */
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-grid {
+    grid-template-columns: repeat(3, 1fr); /* Maintain 3 items per row */
+    gap: 3px; /* Further reduce gap for small screens */
+    
+  }
+  .clients-section{
+    display: flex;
+    flex-direction: column; /* Stack text and grid vertically */
+    align-items: center; /* Center align all elements */
+    justify-content: center; /* Center content vertically */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    padding: 30px 20px; /* Reduced padding for smaller screens */
+    gap: 20px; /* Spacing between sections */
+  }
+
+  .client-item {
+    width: 80px; /* Adjust card width for small mobile */
+    height: 100px; /* Adjust card height for small mobile */
+  }
+
+  .clients-title {
+    font-size: 18px; /* Smaller font for mobile */
+  }
+
+  .clients-subtitle {
+    font-size: 10px; /* Smaller subtitle font size */
+    max-width: 300px;
+  }
+}

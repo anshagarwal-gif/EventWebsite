@@ -14,10 +14,12 @@
     padding: 50px;
     background-color: #000; /* Black background as per the uploaded image */
     color: #fff; /* White text color */
+    flex-wrap: wrap;
 }
 
 .about-us-text {
     width: 60%; 
+    padding: 20px; /* Add padding for spacing */
 }
 
 .about-us-text h1 {
@@ -52,6 +54,63 @@
     object-fit: cover;
     border-radius: 10px; /* Optional: rounded corners */
     
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .about-us-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+        padding: 30px;
+    }
+
+    .about-us-text {
+        width: 100%; /* Full width for mobile */
+        text-align: center; /* Center-align text */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .about-us-text h1 {
+        font-size: 40px; /* Reduce font size */
+    }
+
+    .about-us-text p {
+        font-size: 16px; /* Slightly smaller font size */
+        line-height: 1.5;
+    }
+
+    .about-us-image {
+        width: 100%; /* Full width for mobile */
+        text-align: center;
+        padding: 10px; /* Adjust padding */
+    }
+
+    .about-us-image img {
+        width: 100%; /* Full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align items */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .about-us-text h1 {
+        font-size: 32px; /* Further reduce font size */
+    }
+
+    .about-us-text p {
+        font-size: 14px; /* Smaller font size for mobile */
+        line-height: 1.4;
+    }
+
+    .about-us-image img {
+        width: 100%; /* Ensure image scales properly */
+        height: auto; /* Maintain aspect ratio */
+    }
 }
 /* Numbers That Matter Section */
 .numbers-that-matter {
@@ -129,6 +188,7 @@
     font-family: 'Poppins';
 }
 
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .numbers-image,
@@ -188,10 +248,11 @@
 
     .numbers-image img {
         margin-top: 20px;
+       
     }
 
     .numbers-content h2 {
-        font-size: 28px;
+        font-size: 28px;    
     }
 
     .numbers-content p {

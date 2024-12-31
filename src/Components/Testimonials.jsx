@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Components/Testimonials.css';
-import image1 from '../assets/test.jpg'
+import image1 from '../assets/test.jpg';
+
 const Testimonials = () => {
   const testimonials = [
     {
@@ -26,15 +27,29 @@ const Testimonials = () => {
     },
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+    }, 5000); // Change slide every 5 seconds
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
+
   return (
     <div className="testimonials-section">
       <h1 className="testimonials-title">CUSTOMER TESTIMONIALS</h1>
       <p className="testimonials-subtitle">
         See what our clients are saying about their extraordinary event experiences with us!
       </p>
-      <div className="testimonials-grid">
-        {testimonials.map((testimonial) => (
-          <div className="testimonial-item" key={testimonial.id}>
+      <div className="testimonial-slider">
+        {testimonials.map((testimonial, index) => (
+          <div
+            className={`testimonial-item ${
+              index === currentIndex ? 'active' : 'inactive'
+            }`}
+            key={testimonial.id}
+          >
             <p className="testimonial-quote">"{testimonial.quote}"</p>
             <img src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
             <p className="testimonial-name">{testimonial.name}</p>

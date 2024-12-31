@@ -25,26 +25,18 @@
      
   }
   
-  /* Grid Layout */
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for testimonials */
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+
   
   /* Individual Testimonial Items */
   .testimonial-item {
-    background-color: #111; /* Slightly lighter black */
-    border-radius: 12px;
-    padding: 36px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1s ease, transform 1s ease;
+  text-align: center;
+  max-width: 90%; /* Adjusted for better mobile fit */
+  margin: 0 auto;
+  padding: 1.5rem;
   }
   
   .testimonial-item:hover {
@@ -83,4 +75,63 @@
     font-size: 0.9rem;
     color: #aaa;
   }
-  
+  /* Slider Container */
+.testimonial-slider {
+  position: relative;
+  overflow: hidden;
+  height: 500px; /* Adjust as needed for content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Testimonial Items */
+.testimonial-item {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1s ease, transform 1s ease;
+  text-align: center;
+  max-width: 600px; /* Limit the width of testimonials */
+}
+
+.testimonial-item.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.testimonial-item.inactive {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+@media (max-width: 480px) {
+  .testimonials-title {
+    font-size: 24px; /* Smaller title for mobile */
+  }
+
+  .testimonials-subtitle {
+    font-size: 12px; /* Smaller subtitle for mobile */
+  }
+
+  .testimonial-item {
+    padding: 1rem; /* Reduced padding for mobile */
+  }
+
+  .testimonial-quote {
+    font-size: 14px; /* Smaller font size for quotes */
+  }
+
+  .testimonial-image {
+    width: 40px; /* Smaller image size for mobile */
+    height: 40px;
+  }
+
+  .testimonial-name {
+    font-size: 12px; /* Smaller font for names */
+  }
+
+  .testimonial-title {
+    font-size: 0.7rem; /* Smaller font for titles */
+  }
+}
