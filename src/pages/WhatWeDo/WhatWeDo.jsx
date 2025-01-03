@@ -38,7 +38,40 @@ const WhatWeDo = () => {
         {activeTab === 0 && (
           <>
             <div className="content-1">
-              <p className="content-text">Transforming corporate events into impactful experiences requires a perfect blend of creativity, precision, and innovation. From conferences and product launches to team-building sessions and strategic meetings, each event is tailored to meet unique objectives. With advanced technology, seamless execution, and attention to detail, these events leave a lasting impression while driving organizational success.</p>
+              <p className="content-text">Transforming music events into unforgettable experiences requires a perfect blend of creativity, precision, and innovation. From concerts and music festivals to album launches and intimate gigs, each event is tailored to meet unique objectives. With advanced technology, seamless execution, and attention to detail, these events leave a lasting impression while celebrating the power of music.</p>
+            </div>
+
+            <div className='image-grid'>
+              <div>
+                <img src={musicEventImage1} alt="image1" className='eventImage' />
+              </div>
+              <div>
+                <img src={musicEventImage2} alt="image2" className='eventImage' />
+              </div>
+              <div>
+                <img src={musicEventImage3} alt="image3" className='eventImage' />
+              </div>
+              <div>
+                <img src={musicEventImage4} alt="image4" className='eventImage' />
+              </div>
+            </div>
+
+            <div className='content-2'>
+              <p className='content-text'>Wadhwa Events and Exhibits (WEE) specializes in managing music events such as concerts, festivals, album launches, and live gigs. With a focus on innovation, technical excellence, and precision, WEE ensures every event aligns with the client’s vision and delivers exceptional results.</p>
+
+              <p className='content-text'>The process begins with a thorough consultation, where WEE collaborates with clients to understand their goals, vision, and budget. This is followed by detailed planning, which includes venue selection, developing event timelines, and implementing risk management strategies. Their planning phase is designed to anticipate challenges and ensure that every element is meticulously organized. WEE's focus on client needs ensures that each music event is uniquely tailored, reflecting the artist’s brand and the event's theme.</p>
+
+              <p className='content-text'>A key strength of WEE’s music event management is their use of advanced technologies. They integrate cutting-edge sound systems, lighting effects, and stage setups to enhance the overall experience, whether for large-scale festivals or intimate performances. These technologies create immersive and engaging environments, ensuring that the event is impactful and leaves a lasting impression on attendees. On the day of the event, WEE’s on-site project managers oversee every aspect, making real-time adjustments as needed to guarantee flawless execution.</p>
+
+              <p className='content-text'>Post-event, WEE evaluates the success of the music event by analyzing performance against key metrics and gathering client feedback. This analysis not only highlights the achievements of the event but also provides insights for continuous improvement. With their focus on creativity, sustainability, and attention to detail, WEE has established itself as a trusted partner for artists and organizations seeking exceptional music event management solutions.</p>
+            </div>
+          </>
+        )}
+
+        {activeTab === 1 && (
+          <>
+            <div className="content-1">
+              <p className="content-text"> Transforming corporate events into impactful experiences requires a perfect blend of creativity, precision, and innovation. From conferences and product launches to team-building sessions and strategic meetings, each event is tailored to meet unique objectives. With advanced technology, seamless execution, and attention to detail, these events leave a lasting impression while driving organizational success.</p>
             </div>
 
             <div className='image-grid'>
@@ -68,43 +101,10 @@ const WhatWeDo = () => {
           </>
         )}
 
-        {activeTab === 1 && (
-          <>
-            <div className="content-1">
-              <p className="content-text"> Managing social events starts with understanding the client’s vision to create a personalized experience. This involves careful planning, from venue selection to budget optimization, combined with creative designs and advanced technologies. Flawless execution ensures a seamless event, leaving guests with unforgettable memories.</p>
-            </div>
-
-            <div className='image-grid'>
-              <div>
-                <img src={musicEventImage1} alt="image1" className='eventImage' />
-              </div>
-              <div>
-                <img src={musicEventImage2} alt="image2" className='eventImage' />
-              </div>
-              <div>
-                <img src={musicEventImage3} alt="image3" className='eventImage' />
-              </div>
-              <div>
-                <img src={musicEventImage4} alt="image4" className='eventImage' />
-              </div>
-            </div>
-
-            <div className='content-2'>
-              <p className='content-text'>Wadhwa Events and Exhibits (WEE) specializes in managing social events, turning personal milestones like weddings, anniversaries, and charity galas into unforgettable experiences. Their process begins with a detailed consultation to understand the client’s vision, preferences, and objectives, ensuring that every event reflects the client’s unique style and personality. This client-centric approach ensures that each event is carefully tailored to meet specific needs and expectations.</p>
-
-              <p className='content-text'>During the planning phase, WEE handles all critical aspects, including venue selection, timeline development, and budget optimization. Their meticulous attention to detail ensures that every element of the event is thoughtfully curated. By staying within the client’s financial framework, WEE delivers exceptional results without compromising on quality or creativity.</p>
-
-              <p className='content-text'>Creativity and innovation are key elements of WEE’s approach to social events. From immersive designs and unique decor to advanced audio-visual technologies, WEE creates stunning atmospheres that captivate guests and bring the event to life. Their technical and logistical expertise ensures a smooth and flawless execution, whether it’s a large-scale wedding or an intimate charity event.</p>
-
-              <p className='content-text'>On the day of the event, WEE’s skilled team manages every detail, making real-time adjustments to guarantee a seamless experience for clients and their guests. Their ability to combine personalization, creativity, and technical excellence ensures that each social event is truly memorable, leaving a lasting impression and cherished memories for all involved</p>
-            </div>
-          </>
-        )}
-
         {activeTab === 2 && (
           <>
             <div className="content-1">
-              <p className="content-text">We specialize in creating impactful exhibitions that leave a lasting impression. From designing innovative and eye-catching booth layouts to integrating advanced technologies, we ensure every detail is tailored to captivate and engage your audience. Our team handles everything from setup to on-site logistics with precision, guaranteeing seamless execution. With a strong focus on sustainability and creativity, we help businesses showcase their brand, connect with their audience, and achieve exceptional results through memorable exhibition experiences.</p>
+              <p className="content-text">The journey starts with a consultation to understand your vision, preferences, and budget. From selecting the perfect venue to curating décor and managing guest lists, WEE’s planning process ensures every element is seamless and stress-free.</p>
             </div>
 
             <div className='image-grid'>
@@ -123,13 +123,13 @@ const WhatWeDo = () => {
             </div>
 
             <div className='content-2'>
-              <p className='content-text'>Wadhwa Events and Exhibits (WEE) is a trusted leader in exhibition management, offering tailored solutions to help businesses showcase their products and services effectively. Exhibitions are vital for increasing brand visibility, generating leads, and building relationships, and WEE excels in creating immersive, engaging experiences. Their end-to-end process ensures every aspect, from planning to execution, is aligned with the client’s objectives and vision.</p>
+              <p className='content-text'>WEE specializes in planning all types of weddings, including destination events, pre-wedding functions, and themed celebrations. Their expertise in personalization ensures every detail aligns with the couple’s vision, creating a one-of-a-kind experience that leaves a lasting impression.</p>
 
-              <p className='content-text'>WEE begins with a detailed consultation to understand goals and designs customized plans, including booth layouts, venue selection, and creative displays. They focus on integrating interactive technologies and sustainable practices, ensuring innovative and eco-friendly exhibition spaces. This approach enhances visitor engagement while maintaining environmental responsibility.</p>
+              <p className='content-text'>The journey starts with a consultation to understand your vision, preferences, and budget. From selecting the perfect venue to curating décor and managing guest lists, WEE’s planning process ensures every element is seamless and stress-free.</p>
 
-              <p className='content-text'>On the day of the exhibition, WEE ensures seamless execution with on-site managers handling logistics, booth setup, and technical support. Advanced audio-visual and lighting solutions further elevate the exhibition experience, creating an atmosphere conducive to networking and communication. Their emphasis on technical and logistical precision ensures a smooth flow for both exhibitors and attendees.</p>
+              <p className='content-text'>WEE’s innovative use of technology and design elements adds a touch of magic to your big day. From stunning lighting and immersive décor to flawless sound systems, they create captivating experiences that blend tradition with modern elegance.</p>
 
-              <p className='content-text'>Post-exhibition, we evaluates success by gathering feedback and analyzing performance metrics. This commitment to continuous improvement ensures that each event delivers better results than the last. By combining expertise in design, technology, and sustainability, WEE provides impactful exhibitions that leave lasting impressions</p>
+              <p className='content-text'>On the wedding day, WEE’s dedicated team oversees every detail to ensure a smooth and unforgettable celebration. Their commitment to excellence guarantees that your special day is nothing short of perfect. After the event, WEE gathers feedback to continuously improve their services. With creativity, attention to detail, and a passion for love stories, WEE is your trusted partner for extraordinary wedding celebrations.</p>
             </div>
           </>
         )}
@@ -137,7 +137,7 @@ const WhatWeDo = () => {
         {activeTab === 3 && (
           <>
             <div className="content-1">
-              <p className="content-text">We excel in delivering technical excellence to ensure every event is seamless and impactful. By leveraging cutting-edge audio-visual technologies, advanced lighting systems, and interactive tools, we create immersive experiences that captivate audiences. Our team manages all technical aspects, from setup to real-time execution, ensuring flawless delivery for both in-person and virtual events. With a focus on precision and innovation, we help clients achieve their vision while setting new standards for technical brilliance</p>
+              <p className="content-text">Bringing college fests to life requires a vibrant mix of creativity, energy, and precision. From cultural showcases to tech fests and fun-filled carnivals, each event is designed to captivate and engage. Wadhwa Events and Exhibits (WEE) turns your college fest into an unforgettable experience.</p>
             </div>
 
             <div className='image-grid'>
@@ -156,20 +156,21 @@ const WhatWeDo = () => {
             </div>
 
             <div className='content-2'>
-              <p className='content-text'>Wadhwa Events and Exhibits (WEE) showcases exceptional technical excellence by integrating advanced technologies and infrastructure into their events. Whether for corporate, social, or exhibition purposes, WEE ensures seamless execution through innovative and state-of-the-art equipment, elevating the quality and impact of every event. Their technical expertise guarantees that both in-person and virtual events meet global standards and leave a lasting impression on attendees.</p>
+              <p className='content-text'>WEE specializes in managing all types of college events, including cultural festivals, technical expos, and annual day celebrations. Their innovative approach ensures that every fest resonates with the spirit and enthusiasm of the students, leaving a lasting impression.</p>
 
-              <p className='content-text'>A standout feature of WEE’s technical excellence is their use of cutting-edge audio-visual technologies. High-definition screens, dynamic lighting, and immersive sound systems enhance the event experience, making presentations and performances more impactful. Interactive elements such as live polling, virtual reality, and digital displays add an innovative and engaging dimension to events, ensuring memorable experiences for participants.</p>
+              <p className='content-text'>The process begins with a collaborative consultation to understand your vision, theme, and budget. From selecting venues and organizing performances to managing sponsors and attendees, WEE ensures that every detail is executed flawlessly.</p>
 
-              <p className='content-text'>WEE also excels in managing the logistics of technical setups with precision. Their skilled professionals oversee installation, operation, and troubleshooting to ensure everything functions flawlessly during the event. On-site project managers make real-time adjustments to resolve any technical challenges, creating a stress-free and seamless experience for their clients.</p>
+              <p className='content-text'>WEE uses advanced technology and creative elements to enhance the fest experience. From dynamic stage setups and immersive sound systems to vibrant décor and interactive zones, they create an engaging and electrifying atmosphere.
+              During the event, WEE’s team works behind the scenes to ensure smooth execution, handling real-time adjustments with ease. Their focus on precision ensures that every moment is celebrated without a hitch.</p>
 
-              <p className='content-text'>Additionally, WEE incorporates sustainability into its technical solutions by adopting eco-friendly practices like energy-efficient lighting and paperless technologies. This not only reduces the environmental impact of events but also aligns with modern trends and global best practices. Their commitment to both innovation and sustainability highlights their leadership in delivering advanced and responsible event solutions​</p>
+              <p className='content-text'>Post-fest, WEE evaluates its success through performance metrics and feedback. With a passion for innovation, attention to detail, and expertise in large-scale events, WEE is your perfect partner for creating memorable college fests.​</p>
             </div>
           </>
         )}
         {activeTab === 4 && (
           <>
             <div className="content-1">
-              <p className="content-text">We excel in delivering technical excellence to ensure every event is seamless and impactful. By leveraging cutting-edge audio-visual technologies, advanced lighting systems, and interactive tools, we create immersive experiences that captivate audiences. Our team manages all technical aspects, from setup to real-time execution, ensuring flawless delivery for both in-person and virtual events. With a focus on precision and innovation, we help clients achieve their vision while setting new standards for technical brilliance</p>
+              <p className="content-text">Producing unforgettable concerts requires a perfect blend of creativity, precision, and technical expertise. From intimate gigs to large-scale performances, every detail is crafted to deliver a spectacular experience. Wadhwa Events and Exhibits (WEE) brings your concert vision to life with seamless execution and innovative solutions.</p>
             </div>
 
             <div className='image-grid'>
@@ -188,20 +189,21 @@ const WhatWeDo = () => {
             </div>
 
             <div className='content-2'>
-              <p className='content-text'>Wadhwa Events and Exhibits (WEE) showcases exceptional technical excellence by integrating advanced technologies and infrastructure into their events. Whether for corporate, social, or exhibition purposes, WEE ensures seamless execution through innovative and state-of-the-art equipment, elevating the quality and impact of every event. Their technical expertise guarantees that both in-person and virtual events meet global standards and leave a lasting impression on attendees.</p>
+              <p className='content-text'>WEE specializes in concert production, including live performances, music tours, and exclusive gigs. Their expertise in managing large-scale events ensures every show is a captivating experience for both artists and audiences.</p>
 
-              <p className='content-text'>A standout feature of WEE’s technical excellence is their use of cutting-edge audio-visual technologies. High-definition screens, dynamic lighting, and immersive sound systems enhance the event experience, making presentations and performances more impactful. Interactive elements such as live polling, virtual reality, and digital displays add an innovative and engaging dimension to events, ensuring memorable experiences for participants.</p>
+              <p className='content-text'>The process begins with understanding the vision, theme, and technical requirements of the event. From venue selection and stage design to sound, lighting, and logistics, WEE meticulously plans every element to ensure perfection.</p>
 
-              <p className='content-text'>WEE also excels in managing the logistics of technical setups with precision. Their skilled professionals oversee installation, operation, and troubleshooting to ensure everything functions flawlessly during the event. On-site project managers make real-time adjustments to resolve any technical challenges, creating a stress-free and seamless experience for their clients.</p>
+              <p className='content-text'>Using cutting-edge technology, WEE enhances the concert experience with state-of-the-art sound systems, dynamic lighting effects, and immersive stage setups. Their innovative approach creates an electrifying atmosphere that leaves a lasting impact.
+              On the day of the event, WEE’s dedicated team manages all aspects of the production, ensuring flawless execution. Their real-time problem-solving and attention to detail guarantee a seamless and unforgettable performance.</p>
 
-              <p className='content-text'>Additionally, WEE incorporates sustainability into its technical solutions by adopting eco-friendly practices like energy-efficient lighting and paperless technologies. This not only reduces the environmental impact of events but also aligns with modern trends and global best practices. Their commitment to both innovation and sustainability highlights their leadership in delivering advanced and responsible event solutions​</p>
+              <p className='content-text'>After the concert, WEE evaluates its success by gathering feedback and analyzing performance metrics, such as audience engagement and technical efficiency. This process helps refine their services and ensures continuous improvement. With creativity, technical excellence, and a passion for live events, WEE remains your trusted partner for delivering unforgettable concert experiences.​</p>
             </div>
           </>
         )}
         {activeTab === 5 && (
           <>
             <div className="content-1">
-              <p className="content-text">We excel in delivering technical excellence to ensure every event is seamless and impactful. By leveraging cutting-edge audio-visual technologies, advanced lighting systems, and interactive tools, we create immersive experiences that captivate audiences. Our team manages all technical aspects, from setup to real-time execution, ensuring flawless delivery for both in-person and virtual events. With a focus on precision and innovation, we help clients achieve their vision while setting new standards for technical brilliance</p>
+              <p className="content-text">Organizing impactful summit conferences requires a perfect blend of innovation, precision, and expertise. From high-profile gatherings to industry-specific events, each summit is designed to inspire, connect, and deliver meaningful outcomes. Wadhwa Events and Exhibits (WEE) transforms your summit into a powerful platform for collaboration and success.</p>
             </div>
 
             <div className='image-grid'>
@@ -220,20 +222,21 @@ const WhatWeDo = () => {
             </div>
 
             <div className='content-2'>
-              <p className='content-text'>Wadhwa Events and Exhibits (WEE) showcases exceptional technical excellence by integrating advanced technologies and infrastructure into their events. Whether for corporate, social, or exhibition purposes, WEE ensures seamless execution through innovative and state-of-the-art equipment, elevating the quality and impact of every event. Their technical expertise guarantees that both in-person and virtual events meet global standards and leave a lasting impression on attendees.</p>
+              <p className='content-text'>WEE specializes in managing all types of conferences, including industry summits, leadership forums, and business symposiums. With a focus on innovation and seamless execution, they ensure every detail reflects your organization’s goals and vision.</p>
 
-              <p className='content-text'>A standout feature of WEE’s technical excellence is their use of cutting-edge audio-visual technologies. High-definition screens, dynamic lighting, and immersive sound systems enhance the event experience, making presentations and performances more impactful. Interactive elements such as live polling, virtual reality, and digital displays add an innovative and engaging dimension to events, ensuring memorable experiences for participants.</p>
+              <p className='content-text'>The process begins with a thorough consultation to understand your objectives, audience, and budget. From venue selection and speaker coordination to designing engaging agendas, WEE ensures every aspect is meticulously planned for maximum impact.
+              WEE leverages advanced technology to elevate the conference experience. From state-of-the-art audio-visual setups and live-streaming options to interactive tools for audience engagement, their solutions create dynamic and immersive environments.</p>
 
-              <p className='content-text'>WEE also excels in managing the logistics of technical setups with precision. Their skilled professionals oversee installation, operation, and troubleshooting to ensure everything functions flawlessly during the event. On-site project managers make real-time adjustments to resolve any technical challenges, creating a stress-free and seamless experience for their clients.</p>
+              <p className='content-text'>On the day of the summit, WEE’s experienced team manages all logistics and ensures flawless execution. Their attention to detail and adaptability guarantee a smooth and successful event.</p>
 
-              <p className='content-text'>Additionally, WEE incorporates sustainability into its technical solutions by adopting eco-friendly practices like energy-efficient lighting and paperless technologies. This not only reduces the environmental impact of events but also aligns with modern trends and global best practices. Their commitment to both innovation and sustainability highlights their leadership in delivering advanced and responsible event solutions​</p>
+              <p className='content-text'>After the conference, Wadhwa Events and Exhibits (WEE) takes a proactive approach to evaluate the event’s success. They gather valuable feedback from attendees and analyze key performance metrics to measure the impact of the summit. This comprehensive assessment not only highlights the event's achievements but also provides insights for continuous improvement. By understanding what worked well and identifying areas for growth, WEE ensures that every conference sets a new benchmark. With a steadfast commitment to excellence, innovation, and client satisfaction, WEE is the trusted partner for hosting impactful and memorable summit conferences that leave a lasting impression.​</p>
             </div>
           </>
         )}
         {activeTab === 6 && (
           <>
             <div className="content-1">
-              <p className="content-text">We excel in delivering technical excellence to ensure every event is seamless and impactful. By leveraging cutting-edge audio-visual technologies, advanced lighting systems, and interactive tools, we create immersive experiences that captivate audiences. Our team manages all technical aspects, from setup to real-time execution, ensuring flawless delivery for both in-person and virtual events. With a focus on precision and innovation, we help clients achieve their vision while setting new standards for technical brilliance</p>
+              <p className="content-text">Transforming site office rentals into seamless and functional spaces requires a perfect balance of practicality, comfort, and precision. From construction sites to corporate projects, each office setup is designed to meet the specific needs of the team. Wadhwa Events and Exhibits (WEE) ensures that your site office rental provides a productive and efficient environment.</p>
             </div>
 
             <div className='image-grid'>
@@ -252,20 +255,21 @@ const WhatWeDo = () => {
             </div>
 
             <div className='content-2'>
-              <p className='content-text'>Wadhwa Events and Exhibits (WEE) showcases exceptional technical excellence by integrating advanced technologies and infrastructure into their events. Whether for corporate, social, or exhibition purposes, WEE ensures seamless execution through innovative and state-of-the-art equipment, elevating the quality and impact of every event. Their technical expertise guarantees that both in-person and virtual events meet global standards and leave a lasting impression on attendees.</p>
+              <p className='content-text'>WEE specializes in offering site office rentals for construction sites, project management teams, and corporate offices. Their focus on customization ensures that every rental is tailored to your requirements, providing the perfect space to support your operations.</p>
 
-              <p className='content-text'>A standout feature of WEE’s technical excellence is their use of cutting-edge audio-visual technologies. High-definition screens, dynamic lighting, and immersive sound systems enhance the event experience, making presentations and performances more impactful. Interactive elements such as live polling, virtual reality, and digital displays add an innovative and engaging dimension to events, ensuring memorable experiences for participants.</p>
+              <p className='content-text'>The process starts with a thorough consultation to understand your space needs, location preferences, and budget. WEE then handles the logistics, from selecting the ideal office structure to ensuring all necessary utilities and furnishings are in place.</p>
 
-              <p className='content-text'>WEE also excels in managing the logistics of technical setups with precision. Their skilled professionals oversee installation, operation, and troubleshooting to ensure everything functions flawlessly during the event. On-site project managers make real-time adjustments to resolve any technical challenges, creating a stress-free and seamless experience for their clients.</p>
+              <p className='content-text'>WEE uses high-quality materials and advanced infrastructure to ensure that your site office is functional, comfortable, and safe. Whether it's a modular setup, portable cabin, or prefabricated office, they provide flexible solutions that can be easily customized to fit your requirements.
+              On delivery, WEE ensures that the site office is set up efficiently, ready for immediate use. Their team handles the installation and any adjustments needed, ensuring that the space is operational without delays.</p>
 
-              <p className='content-text'>Additionally, WEE incorporates sustainability into its technical solutions by adopting eco-friendly practices like energy-efficient lighting and paperless technologies. This not only reduces the environmental impact of events but also aligns with modern trends and global best practices. Their commitment to both innovation and sustainability highlights their leadership in delivering advanced and responsible event solutions​</p>
+              <p className='content-text'>Post-setup, WEE provides ongoing support to maintain the office’s functionality. With a focus on quality, reliability, and convenience, WEE is your trusted partner for site office rentals that cater to all your project needs.​</p>
             </div>
           </>
         )}
         {activeTab === 7 && (
           <>
             <div className="content-1">
-              <p className="content-text">We excel in delivering technical excellence to ensure every event is seamless and impactful. By leveraging cutting-edge audio-visual technologies, advanced lighting systems, and interactive tools, we create immersive experiences that captivate audiences. Our team manages all technical aspects, from setup to real-time execution, ensuring flawless delivery for both in-person and virtual events. With a focus on precision and innovation, we help clients achieve their vision while setting new standards for technical brilliance</p>
+              <p className="content-text">Turning sport championships into thrilling, unforgettable experiences requires a perfect blend of energy, precision, and organization. From regional tournaments to grand finals, every event is designed to ignite passion and celebrate athletic excellence. Wadhwa Events and Exhibits (WEE) specializes in creating sports events that energize participants and leave a lasting impact on audiences.</p>
             </div>
 
             <div className='image-grid'>
@@ -284,13 +288,14 @@ const WhatWeDo = () => {
             </div>
 
             <div className='content-2'>
-              <p className='content-text'>Wadhwa Events and Exhibits (WEE) showcases exceptional technical excellence by integrating advanced technologies and infrastructure into their events. Whether for corporate, social, or exhibition purposes, WEE ensures seamless execution through innovative and state-of-the-art equipment, elevating the quality and impact of every event. Their technical expertise guarantees that both in-person and virtual events meet global standards and leave a lasting impression on attendees.</p>
+              <p className='content-text'>WEE expertly manages all types of sports championships, including competitive tournaments, team events, and individual sports contests. Their focus on innovation and seamless execution ensures that each event captures the intensity and excitement of the competition while honoring the athletes’ achievements.</p>
 
-              <p className='content-text'>A standout feature of WEE’s technical excellence is their use of cutting-edge audio-visual technologies. High-definition screens, dynamic lighting, and immersive sound systems enhance the event experience, making presentations and performances more impactful. Interactive elements such as live polling, virtual reality, and digital displays add an innovative and engaging dimension to events, ensuring memorable experiences for participants.</p>
+              <p className='content-text'>The planning starts with a deep understanding of your event’s goals, teams, and logistics. WEE’s team handles everything from venue selection to scheduling, team coordination, and crowd management, ensuring that every aspect runs smoothly.</p>
 
-              <p className='content-text'>WEE also excels in managing the logistics of technical setups with precision. Their skilled professionals oversee installation, operation, and troubleshooting to ensure everything functions flawlessly during the event. On-site project managers make real-time adjustments to resolve any technical challenges, creating a stress-free and seamless experience for their clients.</p>
+              <p className='content-text'>WEE’s use of cutting-edge technology enhances the championship experience, from high-definition live-streaming and real-time score tracking to dynamic sound systems and immersive visuals. Their technical expertise ensures a thrilling atmosphere for both athletes and fans.
+              On event day, WEE’s experienced team oversees every detail, ensuring flawless execution and quick responses to any challenges. Their attention to detail ensures the event runs like clockwork, creating an unforgettable experience for all.</p>
 
-              <p className='content-text'>Additionally, WEE incorporates sustainability into its technical solutions by adopting eco-friendly practices like energy-efficient lighting and paperless technologies. This not only reduces the environmental impact of events but also aligns with modern trends and global best practices. Their commitment to both innovation and sustainability highlights their leadership in delivering advanced and responsible event solutions​</p>
+              <p className='content-text'>Post-event, WEE conducts a thorough evaluation by gathering feedback from participants, audiences, and stakeholders while analyzing key metrics like attendance, engagement, and satisfaction. This helps identify areas for improvement, ensuring each future sports championship is even more successful. With a passion for sports and a commitment to excellence, WEE remains the trusted partner for organizing impactful and seamless sports events.​</p>
             </div>
           </>
         )}
