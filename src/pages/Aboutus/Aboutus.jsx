@@ -18,7 +18,7 @@ const Aboutus = () => {
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.3 // Trigger when 30% of the element is visible
+            threshold: 0.5 // Trigger when 50% of the element is visible
         };
 
         const handleIntersection = (entries, observer) => {

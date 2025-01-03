@@ -19,7 +19,8 @@
 }
 
 .tab-menu {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
     justify-content: space-evenly;
     gap: 30px;
     margin: 40px 0px 70px 0px;
