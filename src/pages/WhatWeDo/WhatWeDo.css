@@ -127,7 +127,11 @@
     }
 
     .image-grid img{
-        width: 45vw;
+        width: 42vw;
+    }
+
+    .tab-menu{
+        grid-template-columns: auto auto auto;
     }
 }
 
@@ -137,11 +141,11 @@
     }
 
     .image-grid{
-        grid-template-columns: auto;
+        grid-template-columns: auto auto;
     }
 
     .image-grid img{
-        width: 87vw;
+        width: 40vw;
     }
 
     .content-1{
@@ -150,5 +154,9 @@
 
     .content-2{
         width: 85%;
+    }
+
+    .tab-menu{
+        grid-template-columns: auto auto;
     }
 }
