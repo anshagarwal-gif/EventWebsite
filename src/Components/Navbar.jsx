@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import droplogo from '../assets/imagelogo.png';
+import NavbarImage from "../assets/navbarimage.jpg"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const currentPath = window.location.pathname
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -25,12 +27,22 @@ const Navbar = () => {
     };
   }, []);
 
+  const NavbarBackgroundStyle = {
+    // backgroundImage: `url(${NavbarImage})`,
+    // backgroundSize: "cover",
+    // backgroundPosition: "center",
+    // backgroundRepeat: "no-repeat",
+    backgroundColor: "black",
+    position: "static"
+  };
+
   return (
     <>
       {/* Navbar */}
-      <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
+      <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} style={currentPath !== "/" ? NavbarBackgroundStyle : {}}
+      >
         <div className="logo-container">
-          <img src={droplogo} alt="Logo" className={`logo ${isScrolled ? "small" : ""}`} />
+          <img src={droplogo} alt="Logo" className={`logo ${(isScrolled) ? "small" : ""} ${currentPath != "/" ? "normalLogoSize" : ''}`} />
         </div>
 
         <div className="hamburger-menu" onClick={toggleMenu}>

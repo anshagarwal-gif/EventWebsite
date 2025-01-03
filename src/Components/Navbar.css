@@ -14,8 +14,8 @@
 }
 .navbar.scrolled {
   padding: 10px 20px; 
-  
 }
+
 .logo-container {
   display: flex;
   justify-content: center;
@@ -28,6 +28,10 @@
 
 .logo.small {
   max-height: 50px;
+}
+
+.logo.normalLogoSize{
+  max-height: 90px;
 }
 
 /* Hamburger Menu */
