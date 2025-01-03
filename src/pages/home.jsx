@@ -13,7 +13,7 @@ import ScrollTransition from '../Components/ScrollTransition';
 import GalleryComponent from '../Components/GalleryComponent';
 import Testimonials from '../Components/Testimonials';
 import Clients from '../Components/Clients';
-import backgroundImage from '../assets/image.png';
+import  backgroundVideo from "../assets/video1.mp4";
 import AppointmentComponent from '../Components/AppointmentComponent/AppointmentComponent';
 import lightbulbimg from '../assets/lightbulbimg.png';
 const Home = () => {
@@ -48,8 +48,15 @@ const Home = () => {
   return (
     <div className="home">
           <div className="backgroundnav-section">
-        <img src={backgroundImage} alt="Background" className="backgroundnav-image" />
-      </div>
+  <video 
+    src={backgroundVideo} 
+    autoPlay 
+    loop 
+    muted 
+    playsInline 
+    className="backgroundnav-video"
+  />
+</div>
       {/* WHO ARE WE SECTION */}
       <div className="who-are-we">
         <h1 className="title" >WHO ARE WE?</h1>

@@ -1,17 +1,34 @@
 /* Navbar Container */
 .navbar {
   display: flex;
-  justify-content: space-between; /* Space for logo and menu */
   align-items: center;
-  padding: 10px 3px;
-  color: #fff;
-  position: relative;
-  height: 100px;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
   width: 100%;
+  padding: 10px 20px;
+  background-color: transparent; /* Semi-transparent background */
+  
+  transition: all 0.3s ease-in-out;
   z-index: 1000;
-  background-position: center;
+}
+.navbar.scrolled {
+  padding: 10px 20px; 
+  
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.logo {
+  max-height: 120px; /* Large size initially */
+  transition: max-height 0.3s ease-in-out; /* Smooth resizing */
 }
 
+.logo.small {
+  max-height: 50px;
+}
 
 /* Hamburger Menu */
 .hamburger-menu {
@@ -26,7 +43,7 @@
   flex-direction: column;
   
   margin-left: auto; /* Automatically shift it to the far right */
-  margin-right: 20px; /* Add spacing from the right edge */
+  margin-right: 40px; /* Add spacing from the right edge */
 }
 
 .hamburger-menu .line {
