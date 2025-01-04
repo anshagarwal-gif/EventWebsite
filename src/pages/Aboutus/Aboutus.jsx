@@ -5,7 +5,7 @@ import backgroundImage from './Assets/image.jpeg';
 import accenturelogo from './Assets/companylogo.png';
 import AppointmentComponent from '../../Components/AppointmentComponent/AppointmentComponent';
 import boximage from './Assets/image copy.png'
-import member1 from './Assets/team1.jpeg'
+import member1 from './Assets/imagelogo.png'
 import backgroundImage1 from './Assets/Exhibition.png';
 import backgroundImage2 from './Assets/image2.jpeg';
 import TeamMember from '../../Components/TeamMember/TeamMember';
@@ -113,7 +113,7 @@ const Aboutus = () => {
                     </div>
                 </div>
             </div>
-            <div className="renowned-names">
+            {/* <div className="renowned-names">
                 <h2>WORKING WITH RENOWNED NAMES</h2>
                 <div className="renowned-logos">
                     <img src={accenturelogo} alt="Accenture" />
@@ -123,7 +123,7 @@ const Aboutus = () => {
                     <img src={accenturelogo} alt="Reliance" />
                     <img src={accenturelogo}alt="Adobe" />
                 </div>
-            </div>
+            </div> */}
             <div className="unforgettable-experiences">
                 <h2>CRAFTING UNFORGETTABLE EXPERIENCES</h2>
                 <p>
@@ -161,14 +161,17 @@ const Aboutus = () => {
                     ensuring your event is flawlessly executed and becomes a cherished memory.
                 </p>
                 <div className="team-members">
-                    <TeamMember image={member1} name={"PRIYA SHARMA"} role={"Event Director"} backContent={"BackContent"}/>
-                    <TeamMember image={member1} name={"RAHUL KAPOOR"} role={"Creative Strategist"} backContent={"BackContent"}/>
-                    <TeamMember image={member1} name={"AISHA SINGH"} role={"Logistics Coordinator"} backContent={"BackContent"}/>
+                    <TeamMember image={member1} name={"Sunil H Wadhwa"} role={"CEO & Managing Director"} backContent={"Exp - 30 years + "}/>
+                    <TeamMember image={member1} name={"Raj S Wadhwa "} role={"Chief Marketing Officer"} backContent={"Exp - 6 years +"} backConten1={"Chief Marketing Officer Diploma in Event management from Oxford University And set design and anchoring course from TTA"}/>
+                  
                 </div>
             </div>
             <AppointmentComponent/>
         </div>
     );
+     
+
+
 };
 
 export default Aboutus;

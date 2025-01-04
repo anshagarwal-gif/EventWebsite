@@ -13,9 +13,89 @@
   width: 100%;
   height: 100vh; /* Adjust height as needed */
   overflow: hidden;
-  
+
 }
 
+.taglines {
+  position: absolute;
+  bottom: 20px; /* Adjust distance from the bottom */
+  left: 20px; /* Adjust distance from the left */
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: Transcend;
+  font-size: 68px; /* Adjust font size */
+  font-weight: 400;
+}
+
+
+.tagline {
+  margin-right: 10px; /* Adjust spacing between taglines */
+}
+.tagline1 {
+  margin-right: 10px; /* Adjust spacing between taglines */
+  color: rgba(255, 212, 49, 1);
+
+}
+/* Handle landscape orientation on mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .taglines {
+    padding-top: 1rem;
+  }
+  
+  .tagline {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .tagline1 {
+    font-size: 1.5rem;
+  }
+}
+/* Extra Small Devices (phones, 320px and up) */
+@media (min-width: 320px) {
+  .tagline {
+    font-size: 1.25rem; /* 20px */
+    margin-bottom: 0.25rem;
+  }
+  
+  .tagline1 {
+    font-size: 1.5rem; /* 24px */
+  }
+}
+
+/* Small Devices (larger phones, 375px and up) */
+@media (min-width: 375px) {
+  .tagline {
+    font-size: 1.5rem; /* 24px */
+    margin-bottom: 0.375rem;
+  }
+  
+  .tagline1 {
+    font-size: 1.75rem; /* 28px */
+  }
+}
+/* Media Queries for Responsive Design */
+@media (min-width: 768px) {
+  .tagline {
+    font-size: 2.25rem; /* 36px */
+    margin-bottom: 1rem;
+  }
+  
+  .tagline1 {
+    font-size: 3rem; /* 48px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .tagline {
+    font-size: 3rem; /* 48px */
+  }
+  
+  .tagline1 {
+    font-size: 3.75rem; /* 60px */
+  }
+}
 .backgroundnav-video {
   width: 100%;
   height: 100%;
@@ -363,18 +443,22 @@
   
   /* Event Image */
   .event-image {
-    width: 210px; /* Increase image size */
-    height: 305px;
+    width: 310px; /* Increase image size */
+    height: 315px;
     position: relative;
     z-index: 2;
     margin-top: 160px; /* Create space for the bulb */
     margin-bottom: 20px; /* Space above the base */
     filter: grayscale(100%); /* Initial grayscale */
     transition: filter 0.3s ease-in-out;
+    left: -12%;
      
  
     
   }
+  .event-image .music{
+    width: 700px;
+  } 
   
  
   /* Event Details */

@@ -180,6 +180,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: Transcend;
+    
 }
 
 .numbers-stats p {
@@ -382,6 +383,7 @@
     font-family: Poppins;
 }
 
+
 /* Responsive Adjustments */
 @media (max-width: 992px) {
     .highlight {
@@ -400,6 +402,7 @@
     padding: 30px 200px;
     background-color: #000; /* Black background */
     color: #fff; /* White text */
+   
 }
 
 .dream-team h2 {
@@ -428,23 +431,138 @@
     justify-items: center; /* Center align the grid items */
     margin-bottom: 60px;
     margin-top: 50px;
+    margin-left: 25%;
 }
 .team-members {
     padding: 0 50px; /* Add spacing from the left and right edges */
 }
+/* Small tablets and large phones (480px and up) */
+@media (min-width: 332px) {
+    .dream-team {
+        padding: 25px 20px;
+       
+    }
 
-/* Responsive Adjustments */
-@media (max-width: 992px) {
+    .dream-team h2 {
+        font-size: 26px;
+    }
+
     .team-members {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns per row for medium screens */
-        gap: 20px; /* Reduce gap for smaller screens */
+        grid-template-columns: repeat(1, 1fr); /* 2 columns */
+        gap: 15px;
+        padding: 0 20px;
     }
 }
 
-@media (max-width: 600px) {
+/* Small tablets and large phones (480px and up) */
+@media (min-width: 480px) {
+    .dream-team {
+        padding: 25px 20px;
+    }
+
+    .dream-team h2 {
+        font-size: 36px;
+    }
+
     .team-members {
-        grid-template-columns: 1fr; /* 1 column per row for small screens */
-        gap: 15px; /* Further reduce gap */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 15px;
+        padding: 0 20px;
+    }
+}
+
+/* Medium tablets (768px and up) */
+@media (min-width: 768px) {
+    .dream-team {
+        padding: 30px 40px;
+    }
+
+    .dream-team h2 {
+        font-size: 42px;
+    }
+
+    .dream-team p {
+        font-size: 17px;
+        max-width: 600px;
+    }
+
+    .team-members {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 30px;
+        max-width: 900px;
+        margin: 40px auto;
+    }
+}
+
+/* Large tablets and small desktops (992px and up) */
+@media (min-width: 992px) {
+    .dream-team {
+        padding: 30px 60px;
+    }
+
+    .dream-team h2 {
+        font-size: 48px;
+    }
+
+    .dream-team p {
+        font-size: 18px;
+        max-width: 700px;
+    }
+
+    .team-members {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 0 50px;
+        margin-left: 25%;
+    }
+}
+
+/* Large desktops (1200px and up) */
+@media (min-width: 1200px) {
+    .dream-team {
+        padding: 30px 200px;
+    }
+
+    .team-members {
+        gap: 30px;
+        max-width: 1200px;
+    }
+}
+
+/* Handle very small screens */
+@media (max-width: 320px) {
+    .dream-team h2 {
+        font-size: 28px;
+    }
+
+    .dream-team p {
+        font-size: 14px;
+    }
+
+    .team-members {
+        padding: 0 10px;
+    }
+}
+
+/* Handle landscape orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+    .dream-team {
+        padding: 15px;
+    }
+
+    .dream-team h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .dream-team p {
+        font-size: 14px;
+        margin: 5px auto;
+    }
+
+    .team-members {
+        margin: 20px auto;
     }
 }
 

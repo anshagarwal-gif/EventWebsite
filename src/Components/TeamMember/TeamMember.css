@@ -2,7 +2,7 @@
 .team-member {
     text-align: center;
     width: 100%;
-    max-width: 316px;
+    max-width: 280px; 
     perspective: 1000px; /* Creates 3D effect */
     cursor: pointer;
     margin: 20px 0; /* Space between cards */
@@ -54,7 +54,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    padding: 15px;
 }
 
 /* Front Face Content */
@@ -83,11 +83,14 @@
 
 .flip-card-back p {
     font-family: Poppins;
-    font-size: 14px;
+    font-size: 18px;
     margin: 5px 0;
     color: #000;
+    font-weight: 800;
 }
-
+.flip-card-back .detail{
+    font-size: 16px;
+}
 .flip-card-back .social-links {
     margin-top: 20px;
     display: flex;
@@ -116,66 +119,120 @@
     color: #fff;
 }
 
-/* Responsive Design */
-
-/* Medium Screens (Tablets) */
-@media (max-width: 992px) {
+/* Extra Small Devices (320px and up) */
+@media (min-width: 320px) {
     .team-member {
-        max-width: 280px; /* Reduce card size */
+        max-width: 300px;
     }
-
+    
     .flip-card-inner {
-        height: 450px; /* Reduce card height */
-    }
-
-    .flip-card-back h3 {
-        font-size: 18px; /* Adjust heading size */
-    }
-
-    .flip-card-back p {
-        font-size: 13px; /* Adjust paragraph size */
-    }
-
-    .flip-card-back .social-links a {
-        font-size: 18px; /* Adjust icon size */
+        height: 400px;
     }
 }
 
-/* Small Screens (Mobile) */
-@media (max-width: 600px) {
+/* Small Devices (375px and up) */
+@media (min-width: 375px) {
     .team-member {
-        max-width: 100%; /* Full width on mobile */
+        max-width: 340px;
+    }
+    
+    .flip-card-inner {
+        height: 420px;
+    }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .team-member {
+        max-width: 316px;
+        margin: 20px;
     }
 
     .flip-card-inner {
-        height: 400px; /* Further reduce card height */
+        height: 450px;
     }
 
-    .flip-card-front img {
-        object-fit: contain; /* Ensure images fit without cropping */
+    .flip-card-front h3 {
+        font-size: 18px;
     }
 
-    .flip-card-back {
-        padding: 10px; /* Reduce padding for smaller cards */
+    .flip-card-front p {
+        font-size: 14px;
     }
 
     .flip-card-back h3 {
-        font-size: 16px; /* Smaller heading for mobile */
+        font-size: 20px;
     }
 
     .flip-card-back p {
-        font-size: 12px; /* Smaller paragraph size */
+        font-size: 16px;
+    }
+
+    .flip-card-back .detail {
+        font-size: 15px;
     }
 
     .flip-card-back .social-links {
-        gap: 10px; /* Reduce spacing between icons */
+        gap: 15px;
     }
 
     .flip-card-back .social-links a {
-        font-size: 16px; /* Smaller icon size */
+        font-size: 20px;
+    }
+}
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .team-member {
+        max-width: 316px;
     }
 
-    .team-content {
-        font-size: 12px; /* Reduce font size in blurred area */
+    .flip-card-inner {
+        height: 500px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    .team-member:active .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    
+    .flip-card-back .social-links a:active {
+        transform: scale(1.2);
+    }
+}
+
+/* Landscape Mode Handling */
+@media (max-height: 500px) and (orientation: landscape) {
+    .team-member {
+        max-width: 280px;
+    }
+
+    .flip-card-inner {
+        height: 280px;
+    }
+
+    .flip-card-back {
+        padding: 10px;
+    }
+
+    .flip-card-back h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .flip-card-back p {
+        font-size: 13px;
+        margin: 2px 0;
+    }
+
+    .flip-card-back .detail {
+        font-size: 12px;
+        margin: 4px 0;
+    }
+
+    .flip-card-back .social-links {
+        margin-top: 8px;
     }
 }
