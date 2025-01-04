@@ -55,12 +55,12 @@ const Footer = () => {
         <div className="footer-right">
           <ul className="social-links">
             <li>
-              <a href="#facebook" className="social-button facebook">
+              <a href="https://www.facebook.com/pages/wadhwa%20Event%20&%20Exihibits/113379997923642/" target="_blank" className="social-button facebook">
                 <div><Facebook/></div> Facebook
               </a>
             </li>
             <li>
-              <a href="#linkedin" className="social-button linkedin">
+              <a href="https://in.linkedin.com/company/wadhwaeventsandexhibits" target="_blank"  className="social-button linkedin">
                 <div><Linkedin /></div> LinkedIn
               </a>
             </li>
@@ -70,7 +70,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#instagram" className="social-button instagram">
+              <a href="https://www.instagram.com/wadhwa_events_/" className="social-button instagram" target="_blank">
                 <div><Instagram /></div> Instagram
               </a>
             </li>

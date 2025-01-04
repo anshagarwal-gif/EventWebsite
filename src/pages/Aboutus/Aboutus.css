@@ -26,7 +26,7 @@
     font-size: 60px;
     margin-bottom: 20px;
     font-weight: bold;
-    background:  rgba(225, 187, 43, 1);
+    background: rgba(255, 212,49 , 1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     font-family: Transcend;
@@ -147,7 +147,7 @@
     font-size: 50px;
     margin-bottom: 20px;
     font-weight: bold;
-    background: rgba(225, 187, 43, 1);
+    background: rgba(255, 212,49 , 1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: Transcend;
@@ -162,24 +162,26 @@
 
 .numbers-stats {
     display: flex;
-    justify-content: space-between;
+    
     flex-wrap: wrap;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .numbers-stats div {
     text-align: center;
-    margin: 10px;
-    width: 40%; /* Default to full width */
+    margin: -15px; /* Reduced spacing between the items */
+    padding-left: 60px; /* Add some padding for a cleaner look */
+    width: 40%;/* Default to full width */
 }
 
 .numbers-stats h3 {
     font-size: 48px;
     font-weight: bold;
-    background: rgba(225, 187, 43, 1);
+    background: rgba(255, 212,49 , 1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: Transcend;
+    margin-bottom: 5px;
     
 }
 
@@ -274,7 +276,7 @@
     text-align: center;
     padding: 50px 20px;
     background-color: #000; /* Black background */
-    background:  rgba(225, 187, 43, 1);
+    background: rgba(255, 212,49 , 1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  
     font-family: Transcend;
@@ -319,7 +321,7 @@
     font-weight: bold;
     margin-bottom: 20px;
     background-color: #000; 
-    background:  rgba(225, 187, 43, 1);
+    background: rgba(255, 212,49 , 1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     font-family: Transcend;
@@ -371,7 +373,7 @@
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 10px;
-    background:  rgba(225, 187, 43, 1);
+    background: rgba(255, 212,49 , 1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     font-family: Transcend;
@@ -409,7 +411,7 @@
     font-size: 48px;
     font-weight: bold;
     margin-bottom: 20px;
-    background:  rgba(225, 187, 43, 1);
+    background: rgba(255, 212,49 , 1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     font-family: Transcend;

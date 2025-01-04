@@ -19,39 +19,26 @@
 .taglines {
   position: absolute;
   bottom: 20px; /* Adjust distance from the bottom */
-  left: 20px; /* Adjust distance from the left */
+  left: 40px; /* Adjust distance from the left */
   display: flex;
   align-items: center;
   color: #fff;
   font-family: Transcend;
-  font-size: 68px; /* Adjust font size */
+  font-size: 98px; /* Adjust font size */
   font-weight: 400;
 }
 
 
 .tagline {
   margin-right: 10px; /* Adjust spacing between taglines */
+  font-size: 98px;
 }
 .tagline1 {
   margin-right: 10px; /* Adjust spacing between taglines */
   color: rgba(255, 212, 49, 1);
 
 }
-/* Handle landscape orientation on mobile */
-@media (max-height: 500px) and (orientation: landscape) {
-  .taglines {
-    padding-top: 1rem;
-  }
-  
-  .tagline {
-    font-size: 1.25rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .tagline1 {
-    font-size: 1.5rem;
-  }
-}
+
 /* Extra Small Devices (phones, 320px and up) */
 @media (min-width: 320px) {
   .tagline {
@@ -89,11 +76,12 @@
 
 @media (min-width: 1024px) {
   .tagline {
-    font-size: 3rem; /* 48px */
+    font-size: 100px;
   }
   
   .tagline1 {
-    font-size: 3.75rem; /* 60px */
+    font-size: 100px;
+    margin-bottom: 19px;
   }
 }
 .backgroundnav-video {
@@ -110,7 +98,7 @@
 .title {
   font-size: 50px;
  
-  background:  rgba(225, 187, 43, 1);
+  background: rgba(255, 212,49 , 1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     font-family: Transcend;
@@ -295,7 +283,7 @@
   
   .what-we-do-title {
     font-size: 48px;
-    background:  rgba(225, 187, 43, 1);
+    background: rgba(255, 212,49 , 1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     font-family: Transcend;
@@ -444,7 +432,7 @@
   /* Event Image */
   .event-image {
     width: 310px; /* Increase image size */
-    height: 315px;
+    height: 335px;
     position: relative;
     z-index: 2;
     margin-top: 160px; /* Create space for the bulb */

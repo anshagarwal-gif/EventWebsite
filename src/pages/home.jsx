@@ -116,10 +116,10 @@ const Home = () => {
         <div className="events-row">
           {/* Event Card */}
           {[
-            { id: 'music', title: 'COLLEGE FESTS', image: guitar },
-            { id: 'corporate', title: 'CORPORATE EVENTS', image: corporateEvent },
-            { id: 'special', title: 'WEDDING EVENTS', image: specialEvent },
-            { id: 'sport', title: 'EXHIBITIONS', image: sportEvent },
+            { id: 'music', title: 'COLLEGE FESTS', image: guitar, link: '/WhatWeDo?tab=3' },
+            { id: 'corporate', title: 'CORPORATE EVENTS', image: corporateEvent, link: '/WhatWeDo?tab=1' },
+            { id: 'special', title: 'WEDDING EVENTS', image: specialEvent, link: '/WhatWeDo?tab=2' },
+            { id: 'sport', title: 'EXHIBITIONS', image: sportEvent , link: '/WhatWeDo'},
           ].map((event, index) => (
             <div
               key={index}
@@ -136,7 +136,7 @@ const Home = () => {
               <img src={event.image} alt={event.title} className="event-image" />
               <div className="event-details">
                 <div className="event-title">{event.title}</div>
-                <div className="event-link">Know more ↗</div>
+                <a className="event-link" href={event.link} target="_blank" rel="noopener noreferrer">Know more ↗</a>
               </div>
             </div>
           ))}
