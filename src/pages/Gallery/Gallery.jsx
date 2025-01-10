@@ -25,7 +25,7 @@ const Gallery = () => {
             <HeroComponent backgroundImageUrl={HeroBackgroundImage} title="Gallery" subtitle1="Aapka Swagat Hai!" subtitle2="We're passionate about crafting unforgettable events, and on this page, you'll discover what sets us apart." />
 
             <div className="whatwedo-event-tabs">
-                <div className="tab-menu">
+                <div className="tab-menu gallery-tabs-menu">
                     {tabs.map(tab => (
                         <button
                             key={tab}

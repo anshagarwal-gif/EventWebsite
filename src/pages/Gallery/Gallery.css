@@ -5,6 +5,10 @@
     justify-content: center;
 }
 
+.gallery-tabs-menu{
+  grid-template-columns: auto auto !important;
+}
+
 .gallery-photo, .gallery-video {
     width: 40vw;
     height: auto;
