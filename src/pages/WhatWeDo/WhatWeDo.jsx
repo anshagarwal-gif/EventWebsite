@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import './WhatWeDo.css'
 import backgroundImage from "./Assets/herosectionbackground.png"
 import musicEventImage1 from './Assets/musiceventimage1.png'
@@ -8,13 +8,19 @@ import musicEventImage4 from './Assets/musiceventimage4.png'
 import DividerImage from "./Assets/divider.png";
 import HeroComponent from '../../Components/HeroComponent/HeroComponent'
 import AppointmentComponent from '../../Components/AppointmentComponent/AppointmentComponent'
+import { useLocation } from 'react-router-dom';
 
 const WhatWeDo = () => {
-
+  const location = useLocation(); // Get location object
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = ['Music Event', 'Corporate Event', 'Wedding Events', 'College Fest', 'Concert Production', 'Summit Conferences', 'Site Office Rentals', 'Sport Championships'];
-
+  useEffect(() => {
+    // Parse the URL parameters for the active tab index
+    const params = new URLSearchParams(location.search);
+    const tabIndex = parseInt(params.get('tab')) || 0;
+    setActiveTab(tabIndex);
+  }, [location.search]);
   return (
     <div>
 

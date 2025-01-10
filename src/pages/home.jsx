@@ -13,7 +13,7 @@ import ScrollTransition from '../Components/ScrollTransition';
 import GalleryComponent from '../Components/GalleryComponent';
 import Testimonials from '../Components/Testimonials';
 import Clients from '../Components/Clients';
-import  backgroundVideo from "../assets/video1.mp4";
+import  backgroundVideo from "../assets/video1.mov";
 import AppointmentComponent from '../Components/AppointmentComponent/AppointmentComponent';
 import lightbulbimg from '../assets/lightbulbimg.png';
 const Home = () => {
@@ -56,6 +56,10 @@ const Home = () => {
     playsInline 
     className="backgroundnav-video"
   />
+    <div className="taglines">
+    <span className="tagline">Creativity For</span>
+    <span className="tagline1">Eternity</span>
+  </div>
 </div>
       {/* WHO ARE WE SECTION */}
       <div className="who-are-we">
@@ -112,10 +116,10 @@ const Home = () => {
         <div className="events-row">
           {/* Event Card */}
           {[
-            { id: 'music', title: 'MUSIC EVENTS', image: guitar },
-            { id: 'corporate', title: 'CORPORATE EVENTS', image: corporateEvent },
-            { id: 'special', title: 'SPECIAL EVENTS', image: specialEvent },
-            { id: 'sport', title: 'SPORT EVENTS', image: sportEvent },
+            { id: 'music', title: 'COLLEGE FESTS', image: guitar, link: '/WhatWeDo?tab=3' },
+            { id: 'corporate', title: 'CORPORATE EVENTS', image: corporateEvent, link: '/WhatWeDo?tab=1' },
+            { id: 'special', title: 'WEDDING EVENTS', image: specialEvent, link: '/WhatWeDo?tab=2' },
+            { id: 'sport', title: 'EXHIBITIONS', image: sportEvent , link: '/WhatWeDo'},
           ].map((event, index) => (
             <div
               key={index}
@@ -132,7 +136,7 @@ const Home = () => {
               <img src={event.image} alt={event.title} className="event-image" />
               <div className="event-details">
                 <div className="event-title">{event.title}</div>
-                <div className="event-link">Know more ↗</div>
+                <a className="event-link" href={event.link} target="_blank" rel="noopener noreferrer">Know more ↗</a>
               </div>
             </div>
           ))}

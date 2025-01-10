@@ -1,7 +1,7 @@
 import React from 'react'
 import './TeamMember.css'
 
-const TeamMember = ({ image, name, role, backContent }) => {
+const TeamMember = ({ image, name, role, backContent,backConten1 }) => {
   return (
     <div className="team-member">
             <div className="flip-card-inner">
@@ -17,6 +17,7 @@ const TeamMember = ({ image, name, role, backContent }) => {
                 {/* Back of card */}
                 <div className="flip-card-back">
                     <p>{backContent}</p>
+                    <p className='detail'>{backConten1}</p>
                 </div>
             </div>
         </div>

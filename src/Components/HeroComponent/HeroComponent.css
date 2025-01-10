@@ -18,7 +18,7 @@
     font-family: Transcend;
     font-size: 4.8vw;
     font-weight: 600;
-    background: linear-gradient(90deg, #E1BB2B, #7B6618);
+    background: rgba(225, 187, 43, 1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 35px 0;
