@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
@@ -9,6 +8,7 @@ import News from './pages/News/News';
 import Gallery from './pages/Gallery/Gallery';
 import Aboutus from './pages/Aboutus/Aboutus';
 import ContactUs from './pages/ContactUs/ContactUs';
+import Events from './pages/Events/events';
 
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
             <Route path='/gallery' element={<Gallery />}/>
             <Route path='/Aboutus' element={<Aboutus />}/>
             <Route path='/Contactus' element={<ContactUs />}/>
+            <Route path='/Events' element={<Events />}/>
           </Routes>
           
           <Footer/>
