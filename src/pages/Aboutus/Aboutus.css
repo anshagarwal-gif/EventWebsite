@@ -246,7 +246,7 @@
 @media (max-width: 480px) {
     .numbers-that-matter {
         flex-direction: column;
-        padding: 20px;
+        padding: 18px;
     }
 
     .numbers-image img {
@@ -317,7 +317,7 @@
 }
 
 .unforgettable-experiences h2 {
-    font-size: 48px;
+    font-size: 39px;
     font-weight: bold;
     margin-bottom: 20px;
     background-color: #000; 

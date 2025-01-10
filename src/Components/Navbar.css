@@ -22,7 +22,7 @@
   width: 100%;
 }
 .logo {
-  max-height: 120px; /* Large size initially */
+  max-height: 100px; /* Large size initially */
   transition: max-height 0.3s ease-in-out; /* Smooth resizing */
 }
 

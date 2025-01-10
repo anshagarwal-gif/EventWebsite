@@ -14,6 +14,8 @@ const ContactUs = () => {
     const [selectedForm, setSelectedForm] = useState("contact");
     const [formData, setFormData] = useState({});
     const [formSubmitted, setFormSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState(null);
   
     const handleFormChange = (event) => {
       setSelectedForm(event.target.value);
@@ -27,11 +29,38 @@ const ContactUs = () => {
       });
     };
   
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
       event.preventDefault();
-      console.log("Form Submitted:", formData);
-      setFormSubmitted(true);
-    };
+      setIsSubmitting(true);
+      setError(null);
+
+      try {
+        const endpoint = selectedForm === 'contact' 
+          ? '/api/contact' 
+          : '/api/appointment';
+          
+        const response = await fetch(`http://localhost:5000${endpoint}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to submit form. Please try again.');
+        }
+
+        setFormSubmitted(true);
+        setFormData({}); // Clear form data
+      } catch (error) {
+        setError(error.message);
+        console.error('Error submitting form:', error);
+      } finally {
+        setIsSubmitting(false);
+      }
+    };  
+    
     return (
 <div>
 <HeroComponent backgroundImageUrl={HeroBackgroundImage} title="Contact US" subtitle1="Aapka Swagat Hai!" subtitle2="We're passionate about crafting unforgettable events, and on this page, you'll discover what sets us apart." />
@@ -142,23 +171,25 @@ const ContactUs = () => {
 
     {/* Full-Width Inputs */}
     <div className="input-container">
-      <textarea
+      <input
+       type='email'
         name="email"
         id="email"
         placeholder="Email"
         onChange={handleChange}
         required
-      ></textarea>
+      ></input>
       <label htmlFor="email">Email</label>
     </div>
     <div className="input-container">
-      <textarea
+      <input
+       type='tel'
         name="phone"
         id="phone"
         placeholder="Phone Number"
         onChange={handleChange}
         required
-      ></textarea>
+      ></input>
       <label htmlFor="phone">Phone Number</label>
     </div>
     <div className="input-container">
@@ -173,7 +204,10 @@ const ContactUs = () => {
       <label htmlFor="message">Your Message</label>
     </div>
 
-    <button type="submit">Send Message</button>
+    <button type="submit" disabled={isSubmitting}>
+      {isSubmitting ? "Submitting..." : "Send Message"}
+    </button>
+    {error && <p className="error-message">{error}</p>}
   </form>
 )}
 
@@ -207,23 +241,25 @@ const ContactUs = () => {
 
     {/* Full-Width Inputs */}
     <div className="input-container">
-      <textarea
+      <input
+       type="email"
         name="email"
         id="email"
         placeholder="Email"
         onChange={handleChange}
         required
-      ></textarea>
+      ></input>
       <label htmlFor="email">Email</label>
     </div>
     <div className="input-container">
-      <textarea
+      <input
+      type="tel"
         name="phone"
         id="phone"
         placeholder="Phone Number"
         onChange={handleChange}
         required
-      ></textarea>
+      ></input>
       <label htmlFor="phone">Phone Number</label>
     </div>
     <div className="input-container">
@@ -282,7 +318,10 @@ const ContactUs = () => {
       <label htmlFor="purpose">Meeting Purpose</label>
     </div>
 
-    <button type="submit">Book Appointment</button>
+    <button type="submit" disabled={isSubmitting}>
+      {isSubmitting ? "Submitting..." : "Book Appointment"}
+    </button>
+    {error && <p className="error-message">{error}</p>}
   </form>
 )}
 

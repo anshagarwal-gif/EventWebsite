@@ -155,18 +155,29 @@
     font-size: 32px;
   }
 }
-
 @media (max-width: 480px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px; /* Add spacing between grid items */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
   .gallery-item {
-    height: 250px;
+    height: auto; /* Let the height adjust automatically */
+    width: 100%; /* Ensure it takes the full width of the grid cell */
+    object-fit: cover; /* Keeps the aspect ratio intact while cropping if needed */
   }
 
   .gallery-item-wide {
-    height: 200px;
+    grid-column: span 2; /* Optionally span multiple columns */
+    height: auto;
   }
 
   .explore-gallery-button {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
+    text-align: center;
   }
 }
