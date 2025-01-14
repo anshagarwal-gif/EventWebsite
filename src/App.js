@@ -10,6 +10,7 @@ import Aboutus from './pages/Aboutus/Aboutus';
 import ContactUs from './pages/ContactUs/ContactUs';
 import Events from './pages/Events/events';
 import Portfolio from './pages/Portfolio/Portfolio';
+import Blog from './pages/Blog/Blog';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path='/Contactus' element={<ContactUs />}/>
             <Route path='/events' element={<Events />}/>
             <Route path='/portfolio' element={<Portfolio />}/>
+            <Route path='/blog' element={<Blog />}/>
           </Routes>
           
           <Footer/>
