@@ -197,43 +197,45 @@
     font-size: 16px;
   }
 }
-/* Small Screens (Mobile) */
 @media (max-width: 480px) {
   .featured-events {
-    flex-direction: column; /* Stack text and cards vertically */
+    flex-direction: column;
   }
 
-
-
   .featured-event-cards {
-    grid-template-columns: repeat(1, 1fr); /* 2 cards per row */
-    gap: 0.8rem; /* Slightly reduce gap between cards */
-    transform: translateX(-60px); /* Shift cards slightly left */
-  
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    transform: none;
+    padding: 0 1rem;
   }
 
   .featured-card {
-    height: 150px; /* Reduce card height */
-    width: 100%; /* Ensure cards fill the grid column width */
-    font-size: 12px; /* Adjust font size for smaller cards */
+    height: auto;
+    min-height: 150px;
+    width: 100%;
+    font-size: 0.875rem;
   }
 
   .featured-card h2 {
-    font-size: 14px; /* Smaller font size for headings */
+    font-size: 1rem;
+    
   }
 
   .featured-card p {
-    font-size: 12px; /* Smaller font size for descriptions */
-    margin-bottom: 0.8rem; /* Reduce bottom margin */
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
   }
 
   .featured-title {
-    font-size: 24px; /* Adjust title size */
+    font-size: 1.5rem;
+   padding: 0 1rem;
+   margin-bottom: 0.75rem;
+    
   }
 
   .featured-description {
-    font-size: 12px; /* Smaller text for description */
-    text-align: left;
-    
+    font-size: 0.875rem;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
   }
 }
