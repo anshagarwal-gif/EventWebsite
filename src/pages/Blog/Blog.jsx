@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useMemo } from 'react'
 import AppointmentComponent from '../../Components/AppointmentComponent/AppointmentComponent'
 import NewsImage from './Assets/newsImage.jpeg'
 import './Blog.css'
@@ -7,79 +7,154 @@ import BlogPostImage from './Assets/blogPostImage.jpeg'
 const Blog = () => {
 
     const [currentPage, setCurrentPage] = useState(1);
-
-    const blogPosts = [
+    const postsPerPage = 3;
+    
+    const allBlogPosts = [
         {
             id: 1,
             title: 'Lorem ipsum dolor sit',
             description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse lectus massa tellus purus elementum elementum egestas laoreet..',
-            image: '/api/placeholder/400/300'
+            image: BlogPostImage
         },
         {
-            id: 1,
+            id: 2,
             title: 'Lorem ipsum dolor sit',
             description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse lectus massa tellus purus elementum elementum egestas laoreet..',
-            image: '/api/placeholder/400/300'
+            image: BlogPostImage
         },
         {
-            id: 1,
+            id: 3,
             title: 'Lorem ipsum dolor sit',
             description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse lectus massa tellus purus elementum elementum egestas laoreet..',
-            image: '/api/placeholder/400/300'
+            image: BlogPostImage
         },
         {
-            id: 1,
-            title: 'Lorem ipsum dolor sit',
+            id: 4,
+            title: 'Lorem ipsum dolor sit 4',
             description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse lectus massa tellus purus elementum elementum egestas laoreet..',
-            image: '/api/placeholder/400/300'
+            image: BlogPostImage
         },
         {
-            id: 1,
+            id: 5,
             title: 'Lorem ipsum dolor sit',
             description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse lectus massa tellus purus elementum elementum egestas laoreet..',
-            image: '/api/placeholder/400/300'
-        }
+            image: BlogPostImage
+        },
+        {
+            id: 6,
+            title: 'Lorem ipsum dolor sit',
+            description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse lectus massa tellus purus elementum elementum egestas laoreet..',
+            image: BlogPostImage
+        },
+        {
+            id: 7,
+            title: 'Lorem ipsum dolor sit',
+            description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse lectus massa tellus purus elementum elementum egestas laoreet..',
+            image: BlogPostImage
+        },
+        {
+            id: 8,
+            title: 'Lorem ipsum dolor sit',
+            description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse lectus massa tellus purus elementum elementum egestas laoreet..',
+            image: BlogPostImage
+        },
+        {
+            id: 9,
+            title: 'Lorem ipsum dolor sit',
+            description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse lectus massa tellus purus elementum elementum egestas laoreet..',
+            image: BlogPostImage
+        },
+        {
+            id: 10,
+            title: 'Lorem ipsum dolor sit',
+            description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse lectus massa tellus purus elementum elementum egestas laoreet..',
+            image: BlogPostImage
+        },
+        {
+            id:11,
+            title: 'Lorem ipsum dolor sit',
+            description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse lectus massa tellus purus elementum elementum egestas laoreet..',
+            image: BlogPostImage
+        },
+        {
+            id: 12,
+            title: 'Lorem ipsum dolor sit',
+            description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse lectus massa tellus purus elementum elementum egestas laoreet..',
+            image: BlogPostImage
+        },
+        {
+            id: 13,
+            title: 'Lorem ipsum dolor sit',
+            description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse lectus massa tellus purus elementum elementum egestas laoreet..',
+            image: BlogPostImage
+        },
     ];
 
-    const postsPerPage = 3;
-    const totalPages = 24;
+    const totalPages = Math.ceil(allBlogPosts.length / postsPerPage);
+
+    const currentPosts = useMemo(() => {
+        const indexOfLastPost = currentPage * postsPerPage;
+        const indexOfFirstPost = indexOfLastPost - postsPerPage;
+        return allBlogPosts.slice(indexOfFirstPost, indexOfLastPost);
+    }, [currentPage]);
 
     const handlePageChange = (pageNumber) => {
-        setCurrentPage(pageNumber);
+        if (pageNumber >= 1 && pageNumber <= totalPages) {
+            setCurrentPage(pageNumber);
+        }
     };
 
     const renderPaginationNumbers = () => {
-        let pages = [];
-        let startPage = Math.max(1, currentPage - 2);
-        let endPage = Math.min(totalPages, currentPage + 2);
+        const pageNumbers = [];
+        const maxVisibleButtons = 5;
+        let startPage, endPage;
+
+        if (totalPages <= maxVisibleButtons) {
+            startPage = 1;
+            endPage = totalPages;
+        } else {
+            const middlePage = Math.floor(maxVisibleButtons / 2);
+            
+            if (currentPage <= middlePage + 1) {
+                startPage = 1;
+                endPage = maxVisibleButtons;
+            } else if (currentPage + middlePage >= totalPages) {
+                startPage = totalPages - maxVisibleButtons + 1;
+                endPage = totalPages;
+            } else {
+                startPage = currentPage - middlePage;
+                endPage = currentPage + middlePage;
+            }
+        }
 
         if (startPage > 1) {
-            pages.push(1);
-            if (startPage > 2) {
-                pages.push('...');
-            }
+            pageNumbers.push(1);
+            if (startPage > 2) pageNumbers.push('...');
         }
 
         for (let i = startPage; i <= endPage; i++) {
-            pages.push(i);
+            pageNumbers.push(i);
         }
 
         if (endPage < totalPages) {
-            if (endPage < totalPages - 1) {
-                pages.push('...');
-            }
-            pages.push(totalPages);
+            if (endPage < totalPages - 1) pageNumbers.push('...');
+            pageNumbers.push(totalPages);
         }
 
-        return pages.map((page, index) => {
+        return pageNumbers.map((page, index) => {
             if (page === '...') {
-                return <span key={`ellipsis-${index}`} className="blog-pagination-ellipsis">...</span>;
+                return (
+                    <span key={`ellipsis-${index}`} className="recent-posts-ellipsis">
+                        ...
+                    </span>
+                );
             }
             return (
                 <button
                     key={page}
                     onClick={() => handlePageChange(page)}
-                    className={`blog-pagination-number ${currentPage === page ? 'blog-pagination-active' : ''}`}
+                    className={`recent-posts-page-number ${currentPage === page ? 'recent-posts-active' : ''}`}
+                    aria-current={currentPage === page ? 'page' : undefined}
                 >
                     {String(page).padStart(2, '0')}
                 </button>
@@ -91,9 +166,12 @@ const Blog = () => {
         <div>
             <div className='blog-card'>
                 <div className='blog-image-container'>
-                    <img src={NewsImage} alt="newsimage" className='blog-image' />
+                    <img src={NewsImage} alt="newsimage" className='blog-image'/>
                 </div>
-                <p className='blog-date'>01 JUNE 2024</p>
+                <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom:"5rem"}}>
+                    <p className='blog-date'>01 JUNE 2024</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height={'1.5rem'}><path fill="#ffffff" d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z"/></svg>
+                </div>
                 <h1 className='blog-title'>Unveiling Excellence in Events & Exhibitions</h1>
                 <div className='blog-content'>
 
@@ -107,43 +185,47 @@ const Blog = () => {
 
             <div className='section-divider'></div>
 
-            <div className="blog-container">
-                <h1 className="blog-heading">RECENT BLOG POST</h1>
-
-                <div className="blog-grid">
-                    {blogPosts.map(post => (
-                        <div key={post.id} className="blog-card">
-                            <div className="blog-image-wrapper">
-                                <img src={post.image} alt={post.title} className="blog-image" />
-                            </div>
-                            <h2 className="blog-title">{post.title}</h2>
-                            <p className="blog-description">{post.description}</p>
+            <div className="recent-posts-container">
+            <h1 className="recent-posts-main-heading">RECENT BLOG POST</h1>
+            
+            <div className="recent-posts-grid">
+                {currentPosts.map(post => (
+                    <div key={post.id} className="recent-posts-item">
+                        <div className="recent-posts-img-wrapper">
+                            <img src={post.image} alt={post.title} className="recent-posts-img" />
                         </div>
-                    ))}
-                </div>
+                        <h2 className="recent-posts-item-title">{post.title}</h2>
+                        <p className="recent-posts-item-desc">{post.description}</p>
+                    </div>
+                ))}
+            </div>
 
-                <div className="blog-pagination">
-                    <button
+            {totalPages > 1 && (
+                <div className="recent-posts-pagination">
+                    <button 
                         onClick={() => handlePageChange(currentPage - 1)}
                         disabled={currentPage === 1}
-                        className="blog-pagination-nav"
+                        className="recent-posts-nav-btn"
+                        aria-label="Previous page"
                     >
                         Prev
                     </button>
 
-                    <div className="blog-pagination-numbers">
+                    <div className="recent-posts-numbers">
                         {renderPaginationNumbers()}
                     </div>
 
-                    <button
+                    <button 
                         onClick={() => handlePageChange(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className="blog-pagination-nav"
+                        className="recent-posts-nav-btn"
+                        aria-label="Next page"
                     >
                         Next
                     </button>
                 </div>
-            </div>
+            )}
+        </div>
 
             <AppointmentComponent />
         </div>

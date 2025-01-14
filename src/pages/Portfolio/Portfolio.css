@@ -7,7 +7,7 @@
   .portfolio-gallery-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 0rem 0 1rem;
   }
   
   .images-wrapper {
@@ -32,25 +32,39 @@
     z-index: 2;
   }
 
+  .images-wrapper .image-card:nth-child(1) {
+    transform: rotate(7deg);
+  }
+  .images-wrapper .image-card:nth-child(2) {
+    transform: rotate(-18deg);
+  }
+  .images-wrapper .image-card:nth-child(3) {
+    transform: rotate(7deg);
+  }
+  .images-wrapper .image-card:nth-child(4) {
+    transform: rotate(-18deg);
+  }
+
   .images-wrapper .image-card:nth-child(1):hover {
-    transform: rotate(7deg) scale(1.1);
+    transform: rotate(0deg) scale(1.1);
   }
   .images-wrapper .image-card:nth-child(2):hover {
-    transform: rotate(-18deg) scale(1.2);
+    transform: rotate(0deg) scale(1.2);
   }
   .images-wrapper .image-card:nth-child(3):hover {
-    transform: rotate(7deg) scale(1.1);
+    transform: rotate(0deg) scale(1.1);
   }
   .images-wrapper .image-card:nth-child(4):hover {
-    transform: rotate(-18deg) scale(1.2);
+    transform: rotate(0deg) scale(1.2);
   }
   
   .image-card img {
-    width: 100%;
-    height: auto;
+    width: 306px;
+    height: 382px;
     border-radius: 8px;
     filter: grayscale(100%);
     transition: all 0.3s ease;
+    object-fit: cover;
   }
   
   .image-card:hover img {

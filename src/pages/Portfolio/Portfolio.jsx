@@ -3,10 +3,10 @@ import "./Portfolio.css"
 import HeroComponent from '../../Components/HeroComponent/HeroComponent';
 import AppointmentComponent from '../../Components/AppointmentComponent/AppointmentComponent';
 import HeroBg from './Assets/portfoliobgimage.jpg'
-import tiltedImage1 from './Assets/tiltedImage1.png'
-import tiltedImage2 from './Assets/tiltedImage2.png'
-import tiltedImage3 from './Assets/tiltedImage3.png'
-import tiltedImage4 from './Assets/tiltedImage4.png'
+import HeroImage1 from './Assets/blogheroimage1.jpeg'
+import HeroImage2 from './Assets/blogheroimage2.jpeg'
+import HeroImage3 from './Assets/blogheroimage3.jpeg'
+import HeroImage4 from './Assets/blogheroimage4.jpeg'
 import GridImage1 from './Assets/portfolioGridImage1.jpg'
 import GridImage2 from './Assets/portfolioGridImage2.jpg'
 import GridImage3 from './Assets/portfolioGridImage3.jpg'
@@ -110,22 +110,22 @@ const Portfolio = () => {
                         <div
                             className="image-card"
                         >
-                            <img src={tiltedImage1} alt={"tiltedImage1"} />
+                            <img src={HeroImage1} alt={"tiltedImage1"} />
                         </div>
                         <div
                             className="image-card"
                         >
-                            <img src={tiltedImage2} alt={"tiltedImage2"} />
+                            <img src={HeroImage2} alt={"tiltedImage2"} />
                         </div>
                         <div
                             className="image-card"
                         >
-                            <img src={tiltedImage3} alt={"tiltedImage3"} />
+                            <img src={HeroImage3} alt={"tiltedImage3"} />
                         </div>
                         <div
                             className="image-card"
                         >
-                            <img src={tiltedImage4} alt={"tiltedImage4"} />
+                            <img src={HeroImage4} alt={"tiltedImage4"} />
                         </div>
                     </div>
                     <p className="portfolio-gallery-description">
