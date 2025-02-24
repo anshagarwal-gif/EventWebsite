@@ -1,14 +1,14 @@
 
 import React from 'react';
 import './GalleryComponent.css';
-import image1 from '../assets/GalleryComponentPhotos/1.jpg';
-import image2 from '../assets/GalleryComponentPhotos/2.jpg';
-import image3 from '../assets/GalleryComponentPhotos/3.jpg';
+import image1 from '../assets/1.svg';
+import image2 from '../assets/2.svg';
+import image3 from '../assets/3.svg';
 import image4 from '../assets/GalleryComponentPhotos/4.jpg';
-import image5 from '../assets/GalleryComponentPhotos/4.jpg';
-import image6 from '../assets/GalleryComponentPhotos/4.jpg';
-import image7 from '../assets/GalleryComponentPhotos/4.jpg';
-import image8 from '../assets/GalleryComponentPhotos/4.jpg';
+import image5 from '../assets/rightwork.svg';
+import image6 from '../assets/4.svg';
+import image7 from '../assets/5.svg';
+import image8 from '../assets/6.svg';
 
 const GalleryComponent = () => {
   const topImages = [

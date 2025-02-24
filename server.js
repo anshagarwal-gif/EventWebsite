@@ -4,11 +4,18 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
+const path = require('path');
+
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'build')));
+
 
 // Email transporter configuration
 const transporter = nodemailer.createTransport({
@@ -18,6 +25,43 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASS
   }
 });
+app.use('/images', express.static(path.join(__dirname, '/images')));
+// Static image data with associated keywords
+const imageKeywordMapping = [
+  { filename: 'newevent5.jpg', keywords: ['nature', 'forest', 'trees'] },
+  { filename: 'newevent6.jpg', keywords: ['mountain', 'snow', 'nature'] },
+  { filename: 'newevent7.jpg', keywords: ['car', 'vehicle', 'sports car'] },
+  { filename: 'newevent8.jpg', keywords: ['car', 'luxury', 'sedan'] },
+  { filename: 'newevent5.jpg', keywords: ['beach', 'ocean', 'sand'] },
+  { filename: 'newevent6.jpg', keywords: ['city', 'skyline', 'buildings'] },
+];
+// Chatbot endpoint to fetch images
+app.post('/api/chatbot', (req, res) => {
+  const { keyword } = req.body;
+
+  if (!keyword) {
+    return res.status(400).json({ message: 'Keyword is required.' });
+  }
+
+  try {
+    // Filter images that contain the keyword in their associated keywords array
+    const matchedImages = imageKeywordMapping.filter(image =>
+      image.keywords.some(k => k.toLowerCase().includes(keyword.toLowerCase()))
+    );
+
+    if (matchedImages.length === 0) {
+      return res.status(404).json({ message: 'No images found for the given keyword.' });
+    }
+
+    // Map matched images to their URLs
+    const imageUrls = matchedImages.map(image => `/images/${image.filename}`);
+    res.status(200).json({ images: imageUrls });
+  } catch (error) {
+    console.error('Error fetching images:', error);
+    res.status(500).json({ message: 'Error fetching images.' });
+  }
+});
+
 
 // Contact form endpoint
 app.post('/api/contact', async (req, res) => {
@@ -123,7 +167,10 @@ app.post('/api/appointment', async (req, res) => {
     res.status(500).json({ message: 'Error booking appointment' });
   }
 });
-
+// Catch-all handler for frontend routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);

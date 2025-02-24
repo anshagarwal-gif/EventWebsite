@@ -50,7 +50,7 @@ const ScrollTransition = () => {
       <img src={logo} alt="Logo" className="logo-image" />
 
       {/* Explore Button */}
-      <a href="/explore" className="explore-button" style={{ fontFamily: 'Poppins'}}>
+      <a href="./Chatbot" className="explore-button" style={{ fontFamily: 'Poppins'}}>
         Explore AI <span className="arrow">↗</span>
       </a>
     </div>

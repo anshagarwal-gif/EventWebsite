@@ -13,9 +13,10 @@ import ScrollTransition from '../Components/ScrollTransition';
 import GalleryComponent from '../Components/GalleryComponent';
 import Testimonials from '../Components/Testimonials';
 import Clients from '../Components/Clients';
-import  backgroundVideo from "../assets/video1.mov";
+import  backgroundVideo from "../assets/mainvideo.webm";
 import AppointmentComponent from '../Components/AppointmentComponent/AppointmentComponent';
 import lightbulbimg from '../assets/lightbulbimg.png';
+
 const Home = () => {
   const [stats, setStats] = useState({ years: 0, events: 0, team: 0 });
   const [hovered, setHovered] = useState({

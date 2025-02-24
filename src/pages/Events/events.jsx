@@ -5,7 +5,7 @@ import backgroundImage from './assets/image.jpeg';
 import AppointmentComponent from '../../Components/AppointmentComponent/AppointmentComponent';
 import EventsSection from './EventsSection';
 import TasteOfIndia from "./assets/TasteOfIndia.png"
-import Bollywood from "./assets/bollyextravananga.png"
+import Bollywood from "./assets/Bollywood.svg"
 import MughalEmpire from "./assets/royalMughalEmpire.png"
 
 
