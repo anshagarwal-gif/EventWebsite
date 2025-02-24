@@ -1,10 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import './WhatWeDo.css'
 import backgroundImage from "./Assets/herosectionbackground.png"
-import musicEventImage1 from './Assets/musiceventimage1.png'
-import musicEventImage2 from './Assets/musiceventimage2.png'
-import musicEventImage3 from './Assets/musiceventimage3.png'
-import musicEventImage4 from './Assets/musiceventimage4.png'
+import music1 from './Assets/Music 1.svg'
+import music2 from './Assets/Music 2.svg'
+import music3 from './Assets/Music 3.svg'
+import music4 from './Assets/Music 4.svg'
+import corporate1 from './Assets/Corporate 1.svg'
+import corporate2 from './Assets/Corporate 2.svg'
+import corporate3 from './Assets/Corporate 3.svg'
+import corporate4 from './Assets/Corporate 4.svg'
+import wedding1 from './Assets/Wedding 1.svg'
+import wedding2 from './Assets/Wedding 2.svg'
+import wedding3 from './Assets/Wedding 3.svg'
+import wedding4 from './Assets/Wedding 4.svg'
+import fest1 from './Assets/Fest 1.svg'
+import fest2 from './Assets/Fest 2.svg'
+import fest3 from './Assets/Fest 3.svg'
+import fest4 from './Assets/Fest 4.svg'
+import concert1 from './Assets/Concert1.svg'
+import concert2 from './Assets/Concert2.svg'
+import concert3 from './Assets/Concert3.svg'
+import concert4 from './Assets/Concert4.svg'
+import conference1 from './Assets/Summit 1.svg'
+import conference2 from './Assets/Summit 2.svg'
+import conference3 from './Assets/Summit 3.svg'
+import conference4 from './Assets/Summit 4.svg'
+import site1 from './Assets/Site 1.svg'
+import site2 from './Assets/Site 2.svg'
+import site3 from './Assets/Site 3.svg'
+import site4 from './Assets/Site 4.svg'
+import sport1 from './Assets/Sport 1.svg'
+import sport2 from './Assets/Sport 2.svg'
+import sport3 from './Assets/Sport 3.svg'
+import sport4 from './Assets/Sport 4.svg'
 import DividerImage from "./Assets/divider.png";
 import HeroComponent from '../../Components/HeroComponent/HeroComponent'
 import AppointmentComponent from '../../Components/AppointmentComponent/AppointmentComponent'
@@ -49,16 +77,16 @@ const WhatWeDo = () => {
 
             <div className='image-grid'>
               <div>
-                <img src={musicEventImage1} alt="image1" className='eventImage' />
+                <img src={music1} alt="image1" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage2} alt="image2" className='eventImage' />
+                <img src={music2} alt="image2" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage3} alt="image3" className='eventImage' />
+                <img src={music3} alt="image3" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage4} alt="image4" className='eventImage' />
+                <img src={music4} alt="image4" className='eventImage' />
               </div>
             </div>
 
@@ -82,16 +110,16 @@ const WhatWeDo = () => {
 
             <div className='image-grid'>
               <div>
-                <img src={musicEventImage1} alt="image1" className='eventImage' />
+                <img src={corporate1} alt="image1" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage2} alt="image2" className='eventImage' />
+                <img src={corporate2} alt="image2" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage3} alt="image3" className='eventImage' />
+                <img src={corporate3} alt="image3" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage4} alt="image4" className='eventImage' />
+                <img src={corporate4} alt="image4" className='eventImage' />
               </div>
             </div>
 
@@ -115,16 +143,16 @@ const WhatWeDo = () => {
 
             <div className='image-grid'>
               <div>
-                <img src={musicEventImage1} alt="image1" className='eventImage' />
+                <img src={wedding1} alt="image1" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage2} alt="image2" className='eventImage' />
+                <img src={wedding2} alt="image2" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage3} alt="image3" className='eventImage' />
+                <img src={wedding3} alt="image3" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage4} alt="image4" className='eventImage' />
+                <img src={wedding4} alt="image4" className='eventImage' />
               </div>
             </div>
 
@@ -148,16 +176,16 @@ const WhatWeDo = () => {
 
             <div className='image-grid'>
               <div>
-                <img src={musicEventImage1} alt="image1" className='eventImage' />
+                <img src={fest1} alt="image1" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage2} alt="image2" className='eventImage' />
+                <img src={fest2} alt="image2" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage3} alt="image3" className='eventImage' />
+                <img src={fest3} alt="image3" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage4} alt="image4" className='eventImage' />
+                <img src={fest4} alt="image4" className='eventImage' />
               </div>
             </div>
 
@@ -181,16 +209,16 @@ const WhatWeDo = () => {
 
             <div className='image-grid'>
               <div>
-                <img src={musicEventImage1} alt="image1" className='eventImage' />
+                <img src={concert1} alt="image1" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage2} alt="image2" className='eventImage' />
+                <img src={concert2} alt="image2" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage3} alt="image3" className='eventImage' />
+                <img src={concert3} alt="image3" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage4} alt="image4" className='eventImage' />
+                <img src={concert4} alt="image4" className='eventImage' />
               </div>
             </div>
 
@@ -214,16 +242,16 @@ const WhatWeDo = () => {
 
             <div className='image-grid'>
               <div>
-                <img src={musicEventImage1} alt="image1" className='eventImage' />
+                <img src={conference1} alt="image1" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage2} alt="image2" className='eventImage' />
+                <img src={conference2} alt="image2" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage3} alt="image3" className='eventImage' />
+                <img src={conference3} alt="image3" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage4} alt="image4" className='eventImage' />
+                <img src={conference4} alt="image4" className='eventImage' />
               </div>
             </div>
 
@@ -247,16 +275,16 @@ const WhatWeDo = () => {
 
             <div className='image-grid'>
               <div>
-                <img src={musicEventImage1} alt="image1" className='eventImage' />
+                <img src={site1} alt="image1" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage2} alt="image2" className='eventImage' />
+                <img src={site2} alt="image2" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage3} alt="image3" className='eventImage' />
+                <img src={site3} alt="image3" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage4} alt="image4" className='eventImage' />
+                <img src={site4} alt="image4" className='eventImage' />
               </div>
             </div>
 
@@ -280,16 +308,16 @@ const WhatWeDo = () => {
 
             <div className='image-grid'>
               <div>
-                <img src={musicEventImage1} alt="image1" className='eventImage' />
+                <img src={sport1} alt="image1" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage2} alt="image2" className='eventImage' />
+                <img src={sport2} alt="image2" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage3} alt="image3" className='eventImage' />
+                <img src={sport3} alt="image3" className='eventImage' />
               </div>
               <div>
-                <img src={musicEventImage4} alt="image4" className='eventImage' />
+                <img src={sport4} alt="image4" className='eventImage' />
               </div>
             </div>
 

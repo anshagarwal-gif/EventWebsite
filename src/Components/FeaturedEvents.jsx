@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import personaImage from '../assets/persona-image.png';
-import eventImage2 from '../assets/FeaturedEvent2.jpg';
-import eventImage3 from '../assets/FeaturedEvent3.jpg';
-import eventImage4 from '../assets/FeaturedEvent4.jpg';
+import personaImage from '../assets/Persona-featuredEvent.svg';
+import PristineImage from '../assets/Pristine-featuredEvent.svg';
+import spectraImage from '../assets/Spectra-featuredEvent.svg';
+import vsmImage from '../assets/VSM-featuredEvent.svg';
 import '../Components/FeaturedEvents.css';
 
 const FeaturedEvents = () => {
@@ -61,7 +61,7 @@ const FeaturedEvents = () => {
         </a>
       </div>
       <div className="featured-event-cards">
-        {[personaImage, eventImage2, eventImage3, eventImage4].map((image, index) => (
+        {[personaImage, vsmImage, PristineImage, spectraImage].map((image, index) => (
           <div
             key={index}
             className={`featured-card ${hoveredCard === index ? 'active' : ''}`}
