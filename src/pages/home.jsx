@@ -36,10 +36,10 @@ const Home = () => {
   });
 
 const demoItems = [
-  { link: '#', text: 'College Fest', image: img1 },
-  { link: '#', text: 'Corporate Events', image: img2 },
-  { link: '#', text: 'Wedding Events', image:img3 },
-  { link: '#', text: 'Art & Exhibitions', image: img4 }
+  { link: 'https://wadhwaevents.com/WhatWeDo?tab=3', text: 'College Fest', image: img1 },
+  { link: 'https://wadhwaevents.com/WhatWeDo?tab=1', text: 'Corporate Events', image: img2 },
+  { link: 'https://wadhwaevents.com/WhatWeDo?tab=2', text: 'Wedding Events', image:img3 },
+  { link: 'https://wadhwaevents.com/WhatWeDo', text: 'Art & Exhibitions', image: img4 }
 ];
 
   useEffect(() => {
