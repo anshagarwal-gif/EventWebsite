@@ -7,15 +7,24 @@ import guitar from '../assets/guitar.png';
 import corporateEvent from '../assets/corporateEvent.png';
 import specialEvent from '../assets/specialEvent.png';
 import sportEvent from '../assets/sportEvent.png';
-import base from '../assets/base.png';
+
 import FeaturedEvents from '../Components/FeaturedEvents';
 import ScrollTransition from '../Components/ScrollTransition';
-import GalleryComponent from '../Components/GalleryComponent';
+
 import Testimonials from '../Components/Testimonials';
 import Clients from '../Components/Clients';
 import  backgroundVideo from "../assets/mainvideo.webm";
 import AppointmentComponent from '../Components/AppointmentComponent/AppointmentComponent';
-import lightbulbimg from '../assets/lightbulbimg.png';
+
+import FeaturedEventsnew from '../Components/FeatureEventsnew';
+import CircularGallery from '../Components/CircularGallery';
+import InfiniteMenu from '../Components/Infinite';
+
+import FlowingMenu from '../Components/Flowingmenu';
+import img1 from "../assets/guitar.png";
+import img2 from "../assets/corporateEvent.png";
+import img3 from "../assets/specialEvent.png";
+import img4 from "../assets/sportEvent.png";
 
 const Home = () => {
   const [stats, setStats] = useState({ years: 0, events: 0, team: 0 });
@@ -25,6 +34,13 @@ const Home = () => {
     special: false,
     sport: false,
   });
+
+const demoItems = [
+  { link: '#', text: 'College Fest', image: img1 },
+  { link: '#', text: 'Corporate Events', image: img2 },
+  { link: '#', text: 'Wedding Events', image:img3 },
+  { link: '#', text: 'Art & Exhibitions', image: img4 }
+];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -113,10 +129,10 @@ const Home = () => {
       </div>
 
       {/* Events Row */}
-      <div className="events-row-container">
-        <div className="events-row">
+      {/* <div className="events-row-container">
+        <div className="events-row"> */}
           {/* Event Card */}
-          {[
+          {/* {[
             { id: 'music', title: 'COLLEGE FESTS', image: guitar, link: '/WhatWeDo?tab=3' },
             { id: 'corporate', title: 'CORPORATE EVENTS', image: corporateEvent, link: '/WhatWeDo?tab=1' },
             { id: 'special', title: 'WEDDING EVENTS', image: specialEvent, link: '/WhatWeDo?tab=2' },
@@ -142,11 +158,45 @@ const Home = () => {
             </div>
           ))}
         </div>
-      </div>
-     
+      </div> */}
+{/*      
+<div style={{ height: '600px', position: 'relative' }}>
+  <InfiniteMenu items={items}/>
+</div> */}
+
+{/* <div style={{ height: '600px', position: 'relative' }}>
+  <CardSwap
+    cardDistance={60}
+    verticalDistance={70}
+    delay={5000}
+    pauseOnHover={false}
+  >
+    <Card>
+      <h3>Card 1</h3>
+      <p>Your content here</p>
+    </Card>
+    <Card>
+      <h3>Card 2</h3>
+      <p>Your content here</p>
+    </Card>
+    <Card>
+      <h3>Card 3</h3>
+      <p>Your content here</p>
+    </Card>
+  </CardSwap>
+</div> */}
+
+
+<div style={{ height: '720px', position: 'relative' }}>
+  <FlowingMenu items={demoItems} />
+</div>
       <FeaturedEvents/>
+       <FeaturedEventsnew/>
+
+
       <ScrollTransition/>
-      <GalleryComponent/>
+      {/* <GalleryComponent/> */}
+  <CircularGallery />
       <Testimonials/>
       <Clients/>
       <AppointmentComponent/>

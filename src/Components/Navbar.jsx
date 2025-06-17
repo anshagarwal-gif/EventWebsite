@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import droplogo from '../assets/imagelogo.png';
-import NavbarImage from "../assets/navbarimage.jpg"
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +28,7 @@ const Navbar = () => {
   }, []);
 
   const NavbarBackgroundStyle = {
-    // backgroundImage: `url(${NavbarImage})`,
+    
     // backgroundSize: "cover",
     // backgroundPosition: "center",
     // backgroundRepeat: "no-repeat",

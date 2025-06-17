@@ -4,9 +4,9 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 2rem;
-  padding-left: 7rem;
-  margin-right: 50px;
+
+  padding-left: 4rem;
+  
   gap: 1rem;
   flex-wrap: nowrap; 
 }
@@ -19,7 +19,7 @@
     gap: 1rem; /* Add spacing between elements */
   }
 .featured-title {
-    font-size: 48px;
+    font-size: 78px;
     font-weight: bold;
     background: rgba(255, 212,49 , 1);
     -webkit-background-clip: text;

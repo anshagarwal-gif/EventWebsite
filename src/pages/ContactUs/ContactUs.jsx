@@ -36,10 +36,10 @@ const ContactUs = () => {
 
       try {
         const endpoint = selectedForm === 'contact' 
-          ? '/api/contact' 
-          : '/api/appointment';
+          ? '/contact' 
+          : '/appointment';
           
-        const response = await fetch(`http://localhost:5000${endpoint}`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL}${endpoint}`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -48,6 +48,9 @@ const ContactUs = () => {
         });
 
         if (!response.ok) {
+          console.log("EMAIL_USER:", process.env.EMAIL_USER || "Not Loaded");
+console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "Loaded" : "Not Loaded");
+console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
           throw new Error('Failed to submit form. Please try again.');
         }
 
@@ -76,19 +79,19 @@ const ContactUs = () => {
             rel="noopener noreferrer"
           >
             <img src={pin} alt="Location Icon" />
-            1055 Arthur ave Elk Groot, 67, New Palmas South Carolina.
+            Office No 17/18, Adarsh Colony, Vidyanagar, Near Airport Pune - 411032
           </a>
         </p>
         <p>
           <a href="tel:+1234678910899">
             <img src={call}alt="Phone Icon" />
-            +1 234 678 9108 99
+            +91 88888 88431
           </a>
         </p>
         <p>
           <a href="mailto:contact@deepalibenpatel.com">
             <img src={mail} alt="Email Icon" />
-            contact@deepalibenpatel.com
+            contact@wadhwaevents.com
           </a>
         </p>
         </div>

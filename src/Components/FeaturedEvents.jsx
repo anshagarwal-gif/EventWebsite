@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import personaImage from '../assets/Featured Events/Persona.svg';
-import eventImage2 from '../assets/Featured Events/VSM.svg';
-import eventImage3 from '../assets/Featured Events/Pristine.svg';
-import eventImage4 from '../assets/Featured Events/Spectra.svg';
+
 import '../Components/FeaturedEvents.css';
 
 const FeaturedEvents = () => {
@@ -51,7 +48,7 @@ const FeaturedEvents = () => {
           Explore Events <span className="arrow">↗</span>
         </a>
       </div>
-      <div className="featured-event-cards">
+      {/* <div className="featured-event-cards">
         {[personaImage, eventImage2, eventImage3, eventImage4].map((image, index) => (
           <div
             key={index}
@@ -79,7 +76,7 @@ const FeaturedEvents = () => {
             )}
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 };

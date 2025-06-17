@@ -11,14 +11,14 @@ import Image5 from './Assets/Image5.png'
 import Image6 from './Assets/Image6.png'
 import Image7 from './Assets/Image7.png'
 import Image8 from './Assets/Image8.png'
-import Video from './Assets/video.mp4'
+
 
 const Gallery = () => {
 
     const [activeTab, setActiveTab] = useState('Photos');
     const tabs = ['Photos', 'Videos'];
     const photos = [Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8];
-    const videos = [Video, Video, Video, Video];
+    const videos = [];
 
     return (
         <div>

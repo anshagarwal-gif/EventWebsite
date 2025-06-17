@@ -14,18 +14,20 @@ app.use(express.json());
 
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, '../public_html')));
 
 
 // Email transporter configuration
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'mail.wadhwaevents.com',
+  port: 465,
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
   }
 });
-app.use('/images', express.static(path.join(__dirname, '/images')));
+
+app.use('/images', express.static(path.join(__dirname, '../public_html/images')));
 // Static image data with associated keywords
 const imageKeywordMapping = [
   { filename: 'newevent5.jpg', keywords: ['nature', 'forest', 'trees'] },
@@ -66,7 +68,7 @@ app.post('/api/chatbot', (req, res) => {
 // Contact form endpoint
 app.post('/api/contact', async (req, res) => {
   const { name, lastName, email, phone, message } = req.body;
-
+  console.log("Received appointment request:", req.body);
   try {
     // Email to user (confirmation)
     const userMailOptions = {
@@ -83,7 +85,7 @@ app.post('/api/contact', async (req, res) => {
         <p><strong>Message:</strong> ${message}</p>
         <br>
         <p>Best regards,</p>
-        <p>Your Company Team</p>
+        <p>Wadhwa Events and Exhibits</p>
       `
     };
 
@@ -137,7 +139,7 @@ app.post('/api/appointment', async (req, res) => {
         <br>
         <p>We look forward to meeting you!</p>
         <p>Best regards,</p>
-        <p>Your Company Team</p>
+        <p>Wadhwa Events and Exhibits</p>
       `
     };
 
@@ -167,11 +169,13 @@ app.post('/api/appointment', async (req, res) => {
     res.status(500).json({ message: 'Error booking appointment' });
   }
 });
-// Catch-all handler for frontend routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+// // Catch-all handler for frontend routes
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../public_html', 'index.html'));
+// });
