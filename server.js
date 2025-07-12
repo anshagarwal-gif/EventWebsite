@@ -12,7 +12,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
+console.log("EMAIL_USER:", process.env.EMAIL_USER);
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, '../public_html')));
 
