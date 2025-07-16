@@ -16,18 +16,26 @@ console.log("EMAIL_USER:", process.env.EMAIL_USER);
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, '../public_html')));
 
-
-// Email transporter configuration
-const transporter = nodemailer.createTransport({
-  service: 'mail.wadhwaevents.com',
-  port: 465,
+// Email transporter configuration - FIXED
+const transporter = nodemailer.createTransporter({
+  service: 'gmail', // Use Gmail since you're using a Gmail address
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS
   }
 });
 
+// Test email configuration on startup
+transporter.verify((error, success) => {
+  if (error) {
+    console.log('Email configuration error:', error);
+  } else {
+    console.log('Email server is ready to take our messages');
+  }
+});
+
 app.use('/images', express.static(path.join(__dirname, '../public_html/images')));
+
 // Static image data with associated keywords
 const imageKeywordMapping = [
   { filename: 'newevent5.jpg', keywords: ['nature', 'forest', 'trees'] },
@@ -37,6 +45,7 @@ const imageKeywordMapping = [
   { filename: 'newevent5.jpg', keywords: ['beach', 'ocean', 'sand'] },
   { filename: 'newevent6.jpg', keywords: ['city', 'skyline', 'buildings'] },
 ];
+
 // Chatbot endpoint to fetch images
 app.post('/api/chatbot', (req, res) => {
   const { keyword } = req.body;
@@ -64,11 +73,16 @@ app.post('/api/chatbot', (req, res) => {
   }
 });
 
-
-// Contact form endpoint
+// Contact form endpoint - IMPROVED ERROR HANDLING
 app.post('/api/contact', async (req, res) => {
   const { name, lastName, email, phone, message } = req.body;
-  console.log("Received appointment request:", req.body);
+  console.log("Received contact request:", req.body);
+  
+  // Validate required fields
+  if (!name || !lastName || !email || !phone || !message) {
+    return res.status(400).json({ message: 'All fields are required.' });
+  }
+
   try {
     // Email to user (confirmation)
     const userMailOptions = {
@@ -110,13 +124,22 @@ app.post('/api/contact', async (req, res) => {
     res.status(200).json({ message: 'Message sent successfully' });
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json({ message: 'Error sending message' });
+    res.status(500).json({ 
+      message: 'Error sending message', 
+      error: process.env.NODE_ENV === 'development' ? error.message : 'Internal server error' 
+    });
   }
 });
 
-// Appointment booking endpoint
+// Appointment booking endpoint - IMPROVED ERROR HANDLING
 app.post('/api/appointment', async (req, res) => {
   const { name, lastName, email, phone, date, from, to, purpose } = req.body;
+  console.log("Received appointment request:", req.body);
+  
+  // Validate required fields
+  if (!name || !lastName || !email || !phone || !date || !from || !to || !purpose) {
+    return res.status(400).json({ message: 'All fields are required.' });
+  }
 
   try {
     // Email to user (confirmation)
@@ -166,7 +189,10 @@ app.post('/api/appointment', async (req, res) => {
     res.status(200).json({ message: 'Appointment booked successfully' });
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json({ message: 'Error booking appointment' });
+    res.status(500).json({ 
+      message: 'Error booking appointment', 
+      error: process.env.NODE_ENV === 'development' ? error.message : 'Internal server error' 
+    });
   }
 });
 
@@ -175,7 +201,7 @@ app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
-// // Catch-all handler for frontend routes
+// Catch-all handler for frontend routes - UNCOMMENT IF NEEDED
 // app.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, '../public_html', 'index.html'));
 // });

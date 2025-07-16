@@ -10,6 +10,7 @@ import call from "./Assets/call.png"
 import mail from "./Assets/mail.png"
 import success from "./Assets/Success .png"
 import calender from "./Assets/calender.png"
+
 const ContactUs = () => {
     const [selectedForm, setSelectedForm] = useState("contact");
     const [formData, setFormData] = useState({});
@@ -36,8 +37,8 @@ const ContactUs = () => {
 
       try {
         const endpoint = selectedForm === 'contact' 
-          ? '/contact' 
-          : '/appointment';
+          ? '/api/contact' 
+          : '/api/appointment';
           
         const response = await fetch(`${process.env.REACT_APP_API_URL}${endpoint}`, {
           method: 'POST',
@@ -48,14 +49,18 @@ const ContactUs = () => {
         });
 
         if (!response.ok) {
-          console.log("EMAIL_USER:", process.env.EMAIL_USER || "Not Loaded");
-console.log("EMAIL_PASS:", process.env.EMAIL_PASS ? "Loaded" : "Not Loaded");
-console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
-          throw new Error('Failed to submit form. Please try again.');
+          // Get error message from response if available
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(errorData.message || 'Failed to submit form. Please try again.');
         }
 
+        const result = await response.json();
         setFormSubmitted(true);
         setFormData({}); // Clear form data
+        
+        // Reset form
+        event.target.reset();
+        
       } catch (error) {
         setError(error.message);
         console.error('Error submitting form:', error);
@@ -84,7 +89,7 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
         </p>
         <p>
           <a href="tel:+1234678910899">
-            <img src={call}alt="Phone Icon" />
+            <img src={call} alt="Phone Icon" />
             +91 88888 88431
           </a>
         </p>
@@ -143,7 +148,6 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
   </label>
 </div>
 
-
 {selectedForm === "contact" && (
   <form onSubmit={handleSubmit} className="contact-form">
     {/* Side-by-Side Inputs for Name and Last Name */}
@@ -154,6 +158,7 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
           name="name"
           id="name"
           placeholder="Name"
+          value={formData.name || ''}
           onChange={handleChange}
           required
         />
@@ -165,6 +170,7 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
           name="lastName"
           id="lastName"
           placeholder="Last Name"
+          value={formData.lastName || ''}
           onChange={handleChange}
           required
         />
@@ -179,9 +185,10 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
         name="email"
         id="email"
         placeholder="Email"
+        value={formData.email || ''}
         onChange={handleChange}
         required
-      ></input>
+      />
       <label htmlFor="email">Email</label>
     </div>
     <div className="input-container">
@@ -190,9 +197,10 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
         name="phone"
         id="phone"
         placeholder="Phone Number"
+        value={formData.phone || ''}
         onChange={handleChange}
         required
-      ></input>
+      />
       <label htmlFor="phone">Phone Number</label>
     </div>
     <div className="input-container">
@@ -201,9 +209,10 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
         name="message"
         id="message"
         placeholder="Your Message ..."
+        value={formData.message || ''}
         onChange={handleChange}
         required
-      ></textarea>
+      />
       <label htmlFor="message">Your Message</label>
     </div>
 
@@ -224,6 +233,7 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
           name="name"
           id="name"
           placeholder="Name"
+          value={formData.name || ''}
           onChange={handleChange}
           required
         />
@@ -235,6 +245,7 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
           name="lastName"
           id="lastName"
           placeholder="Last Name"
+          value={formData.lastName || ''}
           onChange={handleChange}
           required
         />
@@ -249,9 +260,10 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
         name="email"
         id="email"
         placeholder="Email"
+        value={formData.email || ''}
         onChange={handleChange}
         required
-      ></input>
+      />
       <label htmlFor="email">Email</label>
     </div>
     <div className="input-container">
@@ -260,9 +272,10 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
         name="phone"
         id="phone"
         placeholder="Phone Number"
+        value={formData.phone || ''}
         onChange={handleChange}
         required
-      ></input>
+      />
       <label htmlFor="phone">Phone Number</label>
     </div>
     <div className="input-container">
@@ -273,12 +286,13 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
     onClick={() => {
         const dateInput = document.getElementById('date');
         if (dateInput) dateInput.showPicker(); // Opens the calendar picker
-      }}// Focus input on image click
+      }}
   />
   <input
     type="date"
     name="date"
     id="date"
+    value={formData.date || ''}
     onChange={handleChange}
     required
   />
@@ -291,6 +305,7 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
       name="from"
       id="from"
       placeholder="From"
+      value={formData.from || ''}
       onChange={handleChange}
       required
     />
@@ -302,6 +317,7 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
       name="to"
       id="to"
       placeholder="To"
+      value={formData.to || ''}
       onChange={handleChange}
       required
     />
@@ -315,9 +331,10 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
         name="purpose"
         id="purpose"
         placeholder="Meeting Purpose"
+        value={formData.purpose || ''}
         onChange={handleChange}
         required
-      ></textarea>
+      />
       <label htmlFor="purpose">Meeting Purpose</label>
     </div>
 
@@ -332,15 +349,19 @@ console.log("ADMIN_EMAIL:", process.env.ADMIN_EMAIL || "Not Loaded");
         ) : (
           <div className="confirmation-message">
             <img src={success} alt='confirmation-tick'/>
-            <h3>Booking Successful</h3>
-            <p>Appointment Confirmed with our team. You will receive a confirmation message shortly.</p>
+            <h3>
+              {selectedForm === 'contact' ? 'Message Sent Successfully!' : 'Booking Successful'}
+            </h3>
+            <p>
+              {selectedForm === 'contact' 
+                ? 'Thank you for your message. We will get back to you shortly.' 
+                : 'Appointment Confirmed with our team. You will receive a confirmation message shortly.'
+              }
+            </p>
           </div>
         )}
       </div>
     </div>
-
-
-
 </div>
     )
 }
