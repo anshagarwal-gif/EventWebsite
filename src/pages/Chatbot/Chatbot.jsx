@@ -75,13 +75,10 @@ const Chatbot = () => {
     <div className="container1">
       <div className={`content-wrapper1 ${isGenerated ? 'content-shifted1' : ''}`}>
         <div className="hero-content1">
-          <h1 className="headline1">Medium length hero headline goes here</h1>
+          <h1 className="headline1">Your 24/7 Virtual Event Assistant</h1>
           
           <p className="description1">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Suspendisse varius enim in eros elementum tristique. Duis
-            cursus, mi quis viverra ornare, eros dolor interdum nulla, ut
-            commodo diam libero vitae erat.
+            Our smart chatbot is always on, always helpful. Whether you need event details, appointment bookings, or personalized suggestions—this intelligent assistant provides instant answers, simplifies planning, and enhances your experience with seamless support.
           </p>
 
           <div className="input-section1">
@@ -103,10 +100,6 @@ const Chatbot = () => {
               </button>
             </div>
             {error && <p className="error-message1">{error}</p>}
-            <p className="terms-text1">
-              By clicking Sign Up you're confirming that you agree with our{' '}
-              <a href="#" className="terms-link1">Terms and Conditions</a>
-            </p>
           </div>
         </div>
 

@@ -79,7 +79,7 @@ const ContactUs = () => {
         <div className='contact-details'>
         <p>
           <a
-            href="https://www.google.com/maps?q=1055+Arthur+ave+Elk+Groot,+67,+New+Palmas+South+Carolina"
+            href="https://maps.app.goo.gl/cYsTXyVXcNv4YGET7?g_st=ipc"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -88,26 +88,26 @@ const ContactUs = () => {
           </a>
         </p>
         <p>
-          <a href="tel:+1234678910899">
+          <a href="tel:+918888888431">
             <img src={call} alt="Phone Icon" />
             +91 88888 88431
           </a>
         </p>
         <p>
-          <a href="mailto:contact@deepalibenpatel.com">
+          <a href="mailto:contact@wadhwaevents.com">
             <img src={mail} alt="Email Icon" />
             contact@wadhwaevents.com
           </a>
         </p>
         </div>
         <div className="social-icons">
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.instagram.com/wadhwa_events_/" target="_blank" rel="noopener noreferrer">
         <img src={instagram} alt="Instagram" />
       </a>
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://in.linkedin.com/company/wadhwaeventsandexhibits" target="_blank" rel="noopener noreferrer">
         <img src={linkedin} alt="LinkedIn" />
       </a>
-      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.facebook.com/TheWadhwaGroup/events/" target="_blank" rel="noopener noreferrer">
         <img src={facebook} alt="Facebook" />
       </a>
     </div>
@@ -116,7 +116,7 @@ const ContactUs = () => {
             <h2 className='inf'>For more </h2><h2 >Information</h2>
             </div>
           <a href={brochure} target="_blank" rel="noopener noreferrer">
-            <button>Brochure 1</button>
+            <button>Brochure</button>
           </a>
         </div>
       </div>
