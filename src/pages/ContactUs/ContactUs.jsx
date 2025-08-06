@@ -10,7 +10,7 @@ import call from "./Assets/call.png"
 import mail from "./Assets/mail.png"
 import success from "./Assets/Success .png"
 import calender from "./Assets/calender.png"
-
+import brochure from "../ContactUs/Assets/Brochure.pdf"
 const ContactUs = () => {
     const [selectedForm, setSelectedForm] = useState("contact");
     const [formData, setFormData] = useState({});
@@ -115,8 +115,9 @@ const ContactUs = () => {
             <div className='info'>
             <h2 className='inf'>For more </h2><h2 >Information</h2>
             </div>
-          <button>Brochure 1</button>
-          <button>Brochure 2</button>
+          <a href={brochure} target="_blank" rel="noopener noreferrer">
+            <button>Brochure 1</button>
+          </a>
         </div>
       </div>
 
