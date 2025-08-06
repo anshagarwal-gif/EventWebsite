@@ -3,6 +3,9 @@ import AppointmentComponent from '../../Components/AppointmentComponent/Appointm
 import NewsImage from './Assets/newsImage.jpeg'
 import './Blog.css'
 import BlogPostImage from './Assets/blogPostImage.jpeg'
+import BlogPostImage2 from './Assets/blogPostImage2.png'
+import BlogPostImage3 from './Assets/blogPostImage3.png'
+import BlogPostImage4 from './Assets/blogPostImage4.png'
 
 const Blog = () => {
     const [currentPage, setCurrentPage] = useState(1);
@@ -14,7 +17,7 @@ const Blog = () => {
         {
             id: 1,
             title: 'Unveiling Excellence in Events & Exhibitions',
-            date: '01 JUNE 2024',
+            date: '01 JUNE 2025',
             description: 'Lorem ipsum dolor sit amet consectetur. Suspendisse lectus massa tellus purus elementum elementum egestas laoreet..',
             image: NewsImage,
             fullContent: [
@@ -25,45 +28,51 @@ const Blog = () => {
                 "Follow us on our journey to transform ideas into reality. For inquiries, partnerships, or to explore how we can make your vision come alive, reach out to us today."
             ]
         },
-        {
-            id: 2,
-            title: 'Creative Event Planning Strategies',
-            date: '15 MAY 2024',
-            description: 'Discover innovative approaches to event planning that will set your events apart from the competition.',
-            image: BlogPostImage,
-            fullContent: [
-                "In today's competitive event landscape, creativity is the key differentiator that transforms ordinary gatherings into extraordinary experiences. Our team at Wadhwa Events & Exhibits has mastered the art of creative event planning, delivering unique solutions that captivate audiences and exceed expectations.",
-                "Creative event planning begins with understanding your audience's desires and expectations. We conduct thorough research to identify what resonates with your target demographic, ensuring every element of the event speaks directly to their interests and preferences. This audience-first approach allows us to craft experiences that are not only memorable but also meaningful.",
-                "Technology integration plays a crucial role in modern event planning. From interactive displays and augmented reality experiences to seamless digital check-ins and real-time social media engagement, we leverage cutting-edge technology to enhance every aspect of your event. Our tech-savvy approach ensures your event stays ahead of the curve.",
-                "Sustainability is no longer optional in event planning – it's essential. We incorporate eco-friendly practices throughout our planning process, from sourcing sustainable materials to implementing waste reduction strategies. Our green approach not only benefits the environment but also enhances your brand's reputation among environmentally conscious attendees."
-            ]
-        },
-        {
-            id: 3,
-            title: 'Corporate Event Trends 2024',
-            date: '28 APRIL 2024',
-            description: 'Stay ahead with the latest corporate event trends that are shaping the industry in 2024.',
-            image: BlogPostImage,
-            fullContent: [
-                "The corporate events landscape is evolving rapidly, with 2024 bringing exciting new trends that are reshaping how businesses connect with their audiences. At Wadhwa Events & Exhibits, we're at the forefront of these innovations, helping our clients stay ahead of the curve.",
-                "Hybrid events have become the new standard, combining the best of in-person and virtual experiences. This approach allows companies to reach a broader audience while maintaining the personal touch that makes events memorable. Our hybrid event solutions seamlessly integrate both formats, ensuring consistent quality across all touchpoints.",
-                "Personalization is taking center stage in corporate events. Today's attendees expect experiences tailored to their specific interests and needs. We use advanced data analytics and attendee profiling to create personalized journeys that maximize engagement and value for each participant.",
-                "Wellness-focused events are gaining tremendous popularity as companies prioritize employee well-being. From meditation sessions and healthy catering options to ergonomic seating arrangements and mental health workshops, we're incorporating wellness elements into corporate gatherings to create more holistic experiences."
-            ]
-        },
-        {
-            id: 4,
-            title: 'Exhibition Design Masterclass',
-            date: '10 APRIL 2024',
-            description: 'Learn the secrets of creating captivating exhibition designs that attract and engage visitors.',
-            image: BlogPostImage,
-            fullContent: [
-                "Exhibition design is both an art and a science, requiring a perfect balance of creativity, functionality, and strategic thinking. Our design team at Wadhwa Events & Exhibits has perfected this balance, creating exhibitions that not only look stunning but also drive meaningful engagement and business results.",
-                "The foundation of great exhibition design lies in understanding your brand story and translating it into a physical space. We work closely with our clients to identify their core message and values, then craft designs that communicate these elements through every visual and interactive element of the exhibition.",
-                "Flow and navigation are critical components of successful exhibition design. We carefully plan visitor journeys, ensuring intuitive pathways that guide attendees through your story in a logical and engaging sequence. Strategic placement of key elements maximizes exposure and creates natural gathering points for meaningful interactions.",
-                "Interactive elements have become essential in modern exhibitions. From touch screens and product demonstrations to virtual reality experiences and hands-on activities, we integrate interactive features that encourage participation and create memorable moments that visitors will associate with your brand long after the event ends."
-            ]
-        }
+    {
+        id: 2,
+        title: 'Client Voices – What Sets Wadhwa Events Apart',
+        date: '12 JULY 2025',
+        description: 'At Wadhwa Events and Exhibits, we understand that event planning is more than logistics — it’s about turning a client’s vision into a living, breathing experience. Our clients trust us with their most important moments, and we pride ourselves on delivering not just what they ask for, but much more.',
+        image: BlogPostImage2,
+        fullContent: [
+            "In today’s rapidly evolving world of events, delivering exceptional value to clients requires not just execution but intuition, empathy, and innovation. At Wadhwa Events and Exhibits, our clients are at the core of everything we do — their ideas, stories, and goals drive our planning and execution.",
+            "Each event begins with a deep dive into the client's purpose, audience, and tone. From there, we co-create a roadmap that blends creativity with precision. Whether it's a corporate gala, a product launch, a wedding celebration, or a grand-scale expo — we approach every project as a unique story waiting to be told.",
+            "Our clients appreciate how we bring vision to reality through collaborative design processes, detailed timelines, and proactive updates. What sets us apart is our ability to marry aesthetic with efficiency — creating events that are not only stunning but also stress-free for our clients.",
+            "We believe in building long-term relationships over one-time transactions. A major portion of our work today comes through referrals and returning clients who trust us to deliver again and again. Their trust is our badge of honor.",
+            "Client feedback is woven into our growth strategy. Every testimonial, every review, and every handshake at the end of a successful event adds to the learning and the legacy we continue to build. Our work doesn’t end at execution — it’s just the beginning of a lasting relationship with our clients."
+        ]
+    },
+    {
+        id: 3,
+        title: 'Corporate Event Trends 2025',
+        date: '28 JUNE 2025',
+        description: 'Explore the top trends shaping corporate events in 2025 — from hybrid experiences and sustainability to personalized engagement and wellness-first design, all tailored to enhance business impact and attendee experience.',
+        image: BlogPostImage3,
+        fullContent: [
+            "Corporate events in 2025 are no longer just about networking and brand presence — they are immersive, purposeful experiences that resonate with participants at a personal and professional level. At Wadhwa Events and Exhibits, we’ve observed and implemented key trends that are transforming how organizations connect with their people.",
+            "Hybrid is here to stay. Blending in-person intimacy with virtual scalability, hybrid events allow businesses to reach wider audiences, reduce carbon footprints, and track engagement like never before. We design these experiences holistically — ensuring that both digital and physical attendees receive equal attention and impact.",
+            "Data-driven personalization is becoming the gold standard. From pre-event surveys and real-time polling to AI-powered content recommendations, we’re using data to create individualized experiences that make attendees feel seen and valued.",
+            "Sustainability has shifted from being a 'nice-to-have' to a 'must-have.' Brands are increasingly conscious of their environmental impact. We incorporate sustainable practices across the event lifecycle — from digital invites and locally sourced materials to zero-waste catering.",
+            "Well-being and mental health are also front and center. Today’s corporate events feature yoga corners, recharge zones, healthy meal stations, and mindfulness sessions. These elements not only rejuvenate attendees but also reflect a brand’s holistic commitment to its people.",
+            "Ultimately, 2025 is about authenticity. Brands that host meaningful events with clear purpose and community-building at their core are the ones winning hearts and headlines. Wadhwa Events continues to evolve with these trends, offering future-forward solutions tailored for every business."
+        ]
+    },
+    {
+        id: 4,
+        title: 'Exhibition Design Masterclass – Creating Impactful Spaces',
+        date: '10 JUNE 2025',
+        description: 'Uncover the key elements of modern exhibition design that go beyond aesthetics — including layout strategy, interactivity, brand storytelling, and data-driven decision-making for maximizing visitor impact and ROI.',
+        image: BlogPostImage4,
+        fullContent: [
+            "Exhibitions are no longer just booths and banners — they’re experiences. At Wadhwa Events and Exhibits, we specialize in transforming static spaces into dynamic storytelling zones that immerse visitors, showcase brands, and drive interactions.",
+            "A great exhibition begins with brand clarity. We work closely with our clients to distill their core message and USP into visual language. From color psychology and thematic elements to lighting, signage, and spatial design — every element contributes to the story.",
+            "Layout and movement are often underestimated, but we consider them essential. We design with traffic flow in mind, ensuring intuitive navigation, accessibility, and maximized visibility. Key zones such as product displays, demo counters, and networking areas are planned with strategic intent.",
+            "Interactivity is the name of the game. Our designs integrate AR/VR zones, touchscreen kiosks, gamified experiences, live demos, and feedback stations that encourage two-way engagement. These elements help create not just interest but emotional connection.",
+            "One of the biggest goals in any exhibition is lead generation. Our designs balance brand immersion with clear call-to-actions — ensuring that the experience is not just memorable but also measurable.",
+            "Post-event analytics are part of our deliverable. We help clients understand visitor behavior, footfall density, and interaction hotspots — data that feeds into stronger future strategies. With Wadhwa Events, your exhibition isn’t just well-designed — it’s smart, strategic, and scalable."
+        ]
+    }
+
         // Continue with more blog posts following the same pattern...
     ];
 
@@ -160,9 +169,7 @@ const Blog = () => {
                 </div>
                 <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom:"5rem"}}>
                     <p className='blog-date'>{selectedBlog.date}</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height={'1.5rem'}>
-                        <path fill="#ffffff" d="M352 224c53 0 96-43 96-96s-43-96-96-96s-96 43-96 96c0 4 .2 8 .7 11.9l-94.1 47C145.4 170.2 121.9 160 96 160c-53 0-96 43-96 96s43 96 96 96c25.9 0 49.4-10.2 66.6-26.9l94.1 47c-.5 3.9-.7 7.8-.7 11.9c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-25.9 0-49.4 10.2-66.6 26.9l-94.1-47c.5-3.9 .7-7.8 .7-11.9s-.2-8-.7-11.9l94.1-47C302.6 213.8 326.1 224 352 224z"/>
-                    </svg>
+                    
                 </div>
                 <h1 className='blog-title'>{selectedBlog.title}</h1>
                 <div className='blog-content'>

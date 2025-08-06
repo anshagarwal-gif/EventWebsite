@@ -49,18 +49,13 @@ const Footer = () => {
         <div className="footer-right">
           <ul className="social-links">
             <li>
-              <a href="https://www.facebook.com/pages/wadhwa%20Event%20&%20Exihibits/113379997923642/" target="_blank" rel="noopener noreferrer" className="social-button facebook">
+              <a href="https://www.facebook.com/TheWadhwaGroup/events/" target="_blank" rel="noopener noreferrer" className="social-button facebook">
                 <div><Facebook/></div> Facebook
               </a>
             </li>
             <li>
               <a href="https://in.linkedin.com/company/wadhwaeventsandexhibits" target="_blank" rel="noopener noreferrer" className="social-button linkedin">
                 <div><Linkedin /></div> LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="#twitter" className="social-button twitter">
-                <div><Twitter /></div> Twitter
               </a>
             </li>
             <li>
@@ -75,7 +70,7 @@ const Footer = () => {
       <div className="footer-divider"></div>
 
       <div className="footer-bottom">
-        <p>© 2024 - All Rights Reserved - Wadhwa Events and Exhibits</p>
+        <p>© 2025 - All Rights Reserved - Wadhwa Events and Exhibits</p>
       </div>
     </footer>
   );

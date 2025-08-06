@@ -130,10 +130,10 @@ export default function Stack({
         })}
       </div>
       
-      <button className="explore-gallery-button" onClick={() => console.log('Explore gallery clicked')}>
+      {/* <button className="explore-gallery-button" onClick={() => console.log('Explore gallery clicked')}>
         Explore Gallery
         <span className="arrow">→</span>
-      </button>
+      </button> */}
     </div>
   );
 }
