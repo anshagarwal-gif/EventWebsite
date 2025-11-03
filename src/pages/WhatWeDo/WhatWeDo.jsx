@@ -57,6 +57,18 @@ const WhatWeDo = () => {
 
       {/* Events Tabs  */}
       <div className="whatwedo-event-tabs">
+        {/* Header Section - Appears in every tab */}
+        <div className="expertise-header">
+          <h2 className="expertise-title">We at WEE expertise in:</h2>
+          <ul className="expertise-list">
+            <li><strong>Artist Management</strong> – professionally managing and promoting artists.</li>
+            <li><strong>Sound & Special Effects</strong> – delivering impactful audio and visual experiences.</li>
+            <li><strong>Event Production & Creative Direction</strong> – crafting and executing unique, seamless events.</li>
+            <li><strong>Stage & Set Design</strong> – designing immersive and aesthetic environments.</li>
+            <li><strong>Content Creation & Branding</strong> – building creative visuals and strong brand identities.</li>
+          </ul>
+        </div>
+
         <div className="tab-menu">
           {tabs.map((tab , index) => (
             <button

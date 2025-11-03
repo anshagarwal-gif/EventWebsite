@@ -14,7 +14,7 @@
 /* Horizontal scroll section */
 .featured-events-horizontal-section {
   position: relative;
-  height: 300vh;
+  height: 70vh;
   background-color: black;
 }
 
@@ -77,6 +77,19 @@
   -webkit-backdrop-filter: blur(2px);
   text-align: center;
   border-radius: 4px;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .featured-events-card-title {
+    font-size: 14px;
+    padding: 0.75rem;
+  }
+  
+  .featured-events-card {
+    height: 250px;
+    width: 220px;
+  }
 }
 
 /* Tablet styles */

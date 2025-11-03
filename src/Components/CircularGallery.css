@@ -1,67 +1,67 @@
-/* CardStack.css */
+/* CircularGallery.css */
 
-/* Container for centering the entire stack */
+/* Container for centering the entire gallery */
 .stack-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  background-color: #000;
 }
 
+.gallery-title {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
 
-/* Main stack container */
-.stack-container {
+.gallery-subtitle {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+/* Slider Container */
+.work-slider {
   position: relative;
-  perspective: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
   width: 508px;
   height: 508px;
-}
-
-/* Individual card rotation wrapper */
-.card-rotate {
-  position: absolute;
-  cursor: grab;
-  width: 100%;
-  height: 100%;
-}
-
-.card-rotate:active {
-  cursor: grabbing;
-}
-
-/* Card styling */
-.card {
-  border-radius: 20px;
-  border: 5px solid #fff;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  background: #fff;
+}
+
+/* Work Items */
+.work-item {
+  position: absolute;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1.5s ease, transform 1.5s ease;
   width: 100%;
   height: 100%;
-  transition: transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card:hover {
-  transform: scale(1.02);
+.work-item.active {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-/* Card image */
-.card-image {
-  pointer-events: none;
+.work-item.inactive {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+/* Work Image */
+.work-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 /* Explore Button */
@@ -97,24 +97,21 @@
 
 /* Large Desktop */
 @media (min-width: 1025px) {
-  .stack-container {
+  .work-slider {
     width: min(708px, 50vw);
     height: min(508px, 70vh);
-    perspective: 600px;
   }
 }
 
 /* Small Desktop */
 @media (max-width: 1024px) {
-  .stack-container {
+  .work-slider {
     width: min(450px, 60vw);
     height: min(450px, 60vh);
-    perspective: 540px;
   }
   
-  .card {
+  .work-image {
     border-radius: 18px;
-    border-width: 4px;
   }
 }
 
@@ -124,25 +121,21 @@
     padding: 15px;
   }
   
-  .stack-container {
+  .work-slider {
     width: min(400px, 70vw);
     height: min(400px, 50vh);
-    perspective: 480px;
   }
   
-  .card {
+  .work-image {
     border-radius: 16px;
-    border-width: 4px;
   }
   
-  .explore-gallery-button {
-    margin-top: 1.5rem;
-    padding: 0.625rem 1.25rem;
-    font-size: 0.9rem;
+  .gallery-title {
+    font-size: 1.25rem;
   }
   
-  .arrow {
-    font-size: 1.1rem;
+  .gallery-subtitle {
+    font-size: 2.5rem;
   }
 }
 
@@ -152,45 +145,41 @@
     padding: 10px;
   }
   
-  .stack-container {
+  .work-slider {
     width: min(280px, 80vw);
     height: min(280px, 40vh);
-    perspective: 400px;
   }
   
-  .card {
+  .work-image {
     border-radius: 14px;
-    border-width: 3px;
   }
   
-  .stack-instructions {
-    font-size: 12px;
-    bottom: -40px;
+  .gallery-title {
+    font-size: 1rem;
+  }
+  
+  .gallery-subtitle {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
   }
 }
 
 /* Extra small mobile */
 @media (max-width: 320px) {
-  .stack-container {
+  .work-slider {
     width: min(250px, 75vw);
     height: min(250px, 35vh);
-    perspective: 350px;
   }
   
-  .card {
+  .work-image {
     border-radius: 12px;
-    border-width: 2px;
   }
   
-  .explore-gallery-button {
-    margin-top: 1rem;
-    padding: 0.5rem 0.875rem;
-    font-size: 0.8rem;
-    border-radius: 8px;
-  }
-  
-  .arrow {
+  .gallery-title {
     font-size: 0.9rem;
-    margin-left: 0.25rem;
+  }
+  
+  .gallery-subtitle {
+    font-size: 1.75rem;
   }
 }

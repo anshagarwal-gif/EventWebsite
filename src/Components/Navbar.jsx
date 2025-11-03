@@ -6,6 +6,7 @@ import droplogo from '../assets/imagelogo.png';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
   const currentPath = window.location.pathname
 
   const toggleMenu = () => {
@@ -13,10 +14,16 @@ const Navbar = () => {
   };
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
+    const scrollY = window.scrollY;
+    if (scrollY > 200) {
+      setIsHidden(true); // Hide logo when scrolled more
       setIsScrolled(true);
+    } else if (scrollY > 50) {
+      setIsScrolled(true); // Small logo when scrolled a bit
+      setIsHidden(false);
     } else {
       setIsScrolled(false);
+      setIsHidden(false);
     }
   };
 
@@ -42,7 +49,7 @@ const Navbar = () => {
       <nav className={`navbar ${isScrolled ? "scrolled" : ""}`} style={currentPath !== "/" ? NavbarBackgroundStyle : {}}
       >
         <div className="logo-container">
-          <img src={droplogo} alt="Logo" className={`logo ${(isScrolled) ? "small" : ""} ${currentPath != "/" ? "normalLogoSize" : ''}`} />
+          <img src={droplogo} alt="Logo" className={`logo ${(isScrolled) ? "small" : ""} ${(isHidden) ? "hidden" : ""} ${currentPath != "/" ? "normalLogoSize" : ''}`} />
         </div>
 
         <div className="hamburger-menu" onClick={toggleMenu}>
@@ -55,7 +62,6 @@ const Navbar = () => {
       {/* Dropdown Menu */}
       <div className={`menu-container ${isOpen ? "open" : ""}`}>
         <div className="close-menu" onClick={toggleMenu}>
-          &times;
         </div>
         <div className="dropdown-logo">
           <img src={droplogo} alt="Dropdown Logo" />

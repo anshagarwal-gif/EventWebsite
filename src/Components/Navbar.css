@@ -23,11 +23,18 @@
 }
 .logo {
   max-height: 1200px; /* Large size initially */
-  transition: max-height 0.3s ease-in-out; /* Smooth resizing */
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out; /* Smooth transitions */
 }
 
 .logo.small {
   max-height: 50px;
+}
+
+.logo.hidden {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
 }
 
 .logo.normalLogoSize{
@@ -175,11 +182,23 @@
   align-items: center;
   border: 2px solid #fff;
   border-radius: 50%;
-  font-size: 40px;
+  font-size: 28px;
   color: #fff;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.8);
   transition: transform 0.3s ease;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  font-family: Arial, sans-serif;
+}
+
+.close-menu::before {
+  content: "×";
+  display: block;
+  line-height: 1;
+  text-align: center;
 }
 
 .close-menu:hover {

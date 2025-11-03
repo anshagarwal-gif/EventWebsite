@@ -4,7 +4,6 @@ import logo1 from '../assets/client1.png';
 import logo2 from '../assets/client2.png';
 import logo3 from '../assets/client3.png';
 import logo4 from '../assets/client4.png';
-import logo5 from '../assets/client5.png';
 import logo6 from '../assets/client6.png';
 import logo7 from '../assets/client7.png';
 import logo8 from '../assets/client8.png';
@@ -18,11 +17,13 @@ import logo15 from '../assets/client15.png';
 import logo16 from '../assets/client16.png';
 import logo17 from '../assets/client17.png';
 import logo18 from '../assets/client18.png';
+import robotexClientLogo from '../assets/RobotextClient.jpg';
 
 
 const Clients = () => {
-  const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9,
+  const logos = [logo1, logo2, logo3, logo4, logo6, logo7, logo8, logo9,
   logo10, logo11, logo12, logo13, logo14, logo15, logo16, logo17, logo18,
+  robotexClientLogo,
   ];
 
   const [activeLogos, setActiveLogos] = useState(() =>

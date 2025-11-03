@@ -9,9 +9,9 @@ import tiltedImage2 from './Assets/tiltedImage2.png';
 import tiltedImage3 from './Assets/tiltedImage3.png';
 import tiltedImage4 from './Assets/tiltedImage4.png';
 import GridImage1 from './Assets/Persona.png';
-import GridImage2 from './Assets/1.png';
+import GridImage2 from '../../assets/Robotex.jpg';
 import GridImage3 from './Assets/6.png';
-import GridImage31 from './Assets/portfolioGridImage3.jpg'
+import GridImage31 from '../../assets/Vishwarambh.jpg'
 import Pris from './Assets/5.png'
 import Spec from './Assets/spectra.png'
 import VSM from './Assets/VSM.png'
@@ -21,6 +21,7 @@ import Client2 from './Assets/client2.png';
 import Client3 from './Assets/client3.png';
 import Client4 from './Assets/client4.png';
 import Client5 from './Assets/client5.png';
+
 
 const Portfolio = () => {
 
@@ -33,7 +34,7 @@ const Portfolio = () => {
         },
         {
             id: 2,
-            title: "Persona Fest",
+            title: "Robotex India",
             image: GridImage2,
             className: "portfolio-item-short"
         },
@@ -45,7 +46,7 @@ const Portfolio = () => {
         },
         {
             id: 4,
-            title: "Spectra",
+            title: "Vishwarambh 2025",
             image: GridImage31,
             className: "portfolio-item-tall"
         },
